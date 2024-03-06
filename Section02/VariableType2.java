@@ -70,6 +70,12 @@ public class VariableType2 {
         
         // double d1 = 3.14;
         // int d2 = d1; (x) -> int
+
+        // 형변환
+        double d1 = 3.14;
+        int d12 = (int) d1; // 강제 형 변환 -> 3.14에서 3만 할당
+        System.err.println(d12);
+
     }
 
 }
