@@ -25,5 +25,8 @@ public class Sec03Operator03 {
         System.out.println("avg2 : " + avg2 ); // 97.333333333
         System.out.println("avg3 : " + avg3 ); // 97.0
         System.out.println("avg4 : " + avg4 ); // 97.333333333
+
+        System.out.println(22 / 3); // 7
+        System.out.println(22 / 3.0); // 7.333333333333333
     }
 }
