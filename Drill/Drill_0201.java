@@ -23,7 +23,6 @@ public class Drill_0201 {
         System.out.println(b + "ㄱ"); // 100ㄱ
         System.out.println('b' + 24); // 122
         System.out.println('b' + b); // 198
-        System.out.println();
 
         // 숫자 + 문자 연산 (★★★)
         // 숫자 위에 문자가 붙는데 홑따옴표냐 쌍따옴표냐에 따라서 결과가 달라질 수 있다.
@@ -48,7 +47,8 @@ public class Drill_0201 {
         //      - American Standard Code for Information Interchange;
         //  - 인코딩이란?
         //  - encode : 암호로 바꾸다; 부호화하다; 표현하다
-        char c1 = 'A';
-        
+        char c1 = 'A'; // 65
+        System.out.println(c1); // A
+        System.out.println(c1 + 100); // 165
     }
 }
