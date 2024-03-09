@@ -27,8 +27,16 @@ public class Sec03Operator01 {
         // System.out.println(10 % 0); // error
 
         // Question 아래 출력 결과를 말해보시오.
+        // 2번째 오는 수는 절대값으로 온다.
         System.out.println(10 % 6); // 4
         System.out.println(-10 % 6); // -4
+        System.out.println(10 % -6); // 4
         System.out.println(-10 % -6); // -4
+        System.out.println(292 % 3); // 1
+        System.out.println(292 % -3); // 1
+        /*
+         * 나머지 연산자는 나누는 수로 0(제로)은 안되지만 '음수'는 가능
+         * 이때 부호는 무시 ~-> 음수의 절댓값으로 연산이 수행
+         */
     }
 }
