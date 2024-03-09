@@ -50,5 +50,11 @@ public class Drill_0201 {
         char c1 = 'A'; // 65
         System.out.println(c1); // A
         System.out.println(c1 + 100); // 165
+        System.out.println((int)c1); // 65
+
+        char c2 = 'a'; // 97
+        System.out.println(c2); // a
+        System.out.println(c2 + 100); // 197
+        System.out.println((int)c2); // 97
     }
 }
