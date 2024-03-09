@@ -14,15 +14,15 @@ public class Drill_0201 {
         int b = 100;
         System.out.println(b + 100); // 200
         System.out.println(b + "100"); // 100100
-        System.out.println(b + 'K'); // 
-        System.out.println('K' + b);
-        System.out.println(b + "K");
-        System.out.println('K');
-        System.out.println("K");
-        System.out.println(b + 'ㄱ');
-        System.out.println(b + "ㄱ");
-        System.out.println('b' + 24);
-        System.out.println('b' + b);
+        System.out.println(b + 'K'); // 175
+        System.out.println('K' + b); // 175
+        System.out.println(b + "K"); // 100K
+        System.out.println('K'); // K
+        System.out.println("K"); // K
+        System.out.println(b + 'ㄱ'); //12693
+        System.out.println(b + "ㄱ"); // 100ㄱ
+        System.out.println('b' + 24); // 122
+        System.out.println('b' + b); // 198
         System.out.println();
     }
 }
