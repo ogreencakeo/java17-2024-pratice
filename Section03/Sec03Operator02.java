@@ -11,5 +11,11 @@ public class Sec03Operator02 {
          * int average = sum / 3.0; // error
          * double average = sum / 3.0; // error
          */
+        int sum = 292; 
+        double average = sum / 3.0;
+        double average2 = (double) sum / 3;
+        System.out.println(average);
+        System.out.println(average2);
+
     }
 }
