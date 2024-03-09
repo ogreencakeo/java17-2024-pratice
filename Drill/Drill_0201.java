@@ -56,5 +56,10 @@ public class Drill_0201 {
         System.out.println(c2); // a
         System.out.println(c2 + 100); // 197
         System.out.println((int)c2); // 97
+
+        String c3 = "A";
+        System.out.println(c3); // A
+        // System.out.println((int)c3); // error
+        System.out.println(c3 + 100); // A100
     }
 }
