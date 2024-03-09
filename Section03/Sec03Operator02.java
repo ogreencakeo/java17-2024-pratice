@@ -17,5 +17,16 @@ public class Sec03Operator02 {
         System.out.println(average);
         System.out.println(average2);
 
+        /*
+         * 몫과 나머지 출력하기 (printf 사용)
+         */
+        int a = 292;
+        int b = 3;
+        System.out.printf("값 "+ a + "를 " + b + "으로 나누기하면 몫은 %d이고, 나머지는 %d이다.", a/b, a%b);
+        
+        int c = 291;
+        double d = 3;
+        System.out.println(c / d);
+        System.out.printf("값 "+ c + "를 " + d + "으로 나누기하면 몫은 %f이고, 나머지는 %f이다.", c/d, c%d);
     }
 }
