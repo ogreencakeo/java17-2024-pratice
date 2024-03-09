@@ -28,5 +28,10 @@ public class Sec03Operator02 {
         double d = 3;
         System.out.println(c / d);
         System.out.printf("값 "+ c + "를 " + d + "으로 나누기하면 몫은 %f이고, 나머지는 %f이다.", c/d, c%d);
+    
+        /*
+         * 증감 연산자 -> ++, --
+         * 
+         */
     }
 }
