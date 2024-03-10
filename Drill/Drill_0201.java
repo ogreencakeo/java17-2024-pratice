@@ -101,5 +101,17 @@ public class Drill_0201 {
         System.out.println((char)0x0041); // A
         System.out.println((char)0x0030); // 0
         System.out.println((char)0x30); // 0
+
+        // 10진수
+        System.out.println(65); // 65
+        System.out.println((char) 65); // A
+        System.out.println((char) 97); // a
+        System.out.println((char) 75); // K
+
+        // 16 진수 출력 -> 포멧 지정
+        System.out.format("%x", 65); // 41 
+        System.out.format("%x", 97); // 61 
+        System.out.format("%x", 15); // f
+        System.out.format("%x", 64); // 40
     }
 }
