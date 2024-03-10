@@ -92,5 +92,14 @@ public class Drill_0201 {
 
         char a7 = 'K';
         System.out.println("a7 + 25 계산 결과는 ? :" + a7 + 25); // K25
+    
+        // 알파벳 A, a에 해당되는 10진수, 16진수 정도는 암기하자
+        // 16진수 출력 방법 -> u(unicode) 또는 \0x 접두사를 사용하여 출력
+        System.out.println(0x0041); // 65
+        System.out.println(0x0061); // 97
+        System.out.println((char)0x0041); // A
+        System.out.println((char)0x0041); // A
+        System.out.println((char)0x0030); // 0
+        System.out.println((char)0x30); // 0
     }
 }
