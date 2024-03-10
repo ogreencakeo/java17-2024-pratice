@@ -80,5 +80,17 @@ public class Drill_0201 {
         char a3 = '\u0041', a4 = '\u0061';
         System.out.println(a3); // A
         System.out.println(a4); // a
+
+        // 아래 출력 결과를 말해보시오
+        char a5 = 'Z'; //65+25 = 90
+        System.out.println(a5 + 25); // 115
+        System.out.println(a5); // Z
+
+        char b1 = 'A' + 10; // 65 + 10 = 75 = K
+        System.out.println('A' + 1); // 66
+        System.out.println(b1); // K
+
+        char a7 = 'K';
+        System.out.println("a7 + 25 계산 결과는 ? :" + a7 + 25); // K25
     }
 }
