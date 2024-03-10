@@ -67,5 +67,18 @@ public class Drill_0201 {
         System.out.println(c5); // a
         System.out.println((int)c4); // 65
         System.out.println((int)c5); // 97
+
+        // [3]
+        // 연습문제
+        char a1 = 'A';
+        char a2 = 65;
+        System.out.println("a1 : " + a1); // A
+        System.out.println("a1 : " + a2); // A
+        System.err.println(a1 + a2); // 130
+
+        // 10진수 65로 저장하지 않고, 16진수 방식으로 저장을 해도 역시 대문자 A가 출력
+        char a3 = '\u0041', a4 = '\u0061';
+        System.out.println(a3); // A
+        System.out.println(a4); // a
     }
 }
