@@ -32,7 +32,7 @@ public class sec04If02 {
         */
 
         // 기본 예제1
-        int userChoice = 3;
+        int userChoice = 5;
         switch(userChoice){
             case 1:
                 System.out.println("회원 레벨 1의 초딩 멤버입니다.\n");
@@ -48,7 +48,14 @@ public class sec04If02 {
                 break;
             default :
                 System.out.println("혹시 관리자?");
+                AdminGroup.check();
                 break;
         }
+    }
+}
+
+class AdminGroup{
+    public static void check(){
+        System.out.println("관리자 체크중...");
     }
 }
