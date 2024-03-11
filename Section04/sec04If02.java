@@ -30,5 +30,25 @@ public class sec04If02 {
          *          break;
          * }
         */
+
+        // 기본 예제1
+        int userChoice = 3;
+        switch(userChoice){
+            case 1:
+                System.out.println("회원 레벨 1의 초딩 멤버입니다.\n");
+                break;
+            case 2:
+                System.out.println("회원 레벨 2의 중딩 멤버입니다.\n");
+                break;
+            case 3:
+                System.out.println("회원 레벨 3의 고딩 멤버입니다.\n");
+                break;
+            case 4:
+                System.out.println("회원 레벨 4의 대딩 멤버입니다.\n");
+                break;
+            default :
+                System.out.println("혹시 관리자?");
+                break;
+        }
     }
 }
