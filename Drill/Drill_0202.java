@@ -7,11 +7,12 @@ public class Drill_0202 {
         int b = 100;
         System.out.println(b + 100); // 198 -> 200
         System.out.println(b + "100"); // 100100
-        System.out.println(b + 'K'); // 170 -> 175
-        System.out.println('K' + b); // 170 -> 175
+        System.out.println(b + 'K'); // 175
+        System.out.println('K' + b); // 175
         System.out.println(b + "K"); // 100K
         System.out.println('K'); // K
         System.out.println("K"); // K
+        // ㄱ - 12593
         System.out.println(b + 'ㄱ'); // 12693
         System.out.println(b + "ㄱ"); // 100ㄱ
         System.out.println('b' + 24); // 122
