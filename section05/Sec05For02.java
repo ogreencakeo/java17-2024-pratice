@@ -24,13 +24,13 @@ public class Sec05For02 {
         // 1 ~ 10 반복 출력해서 for 조건식에 true 사용하면 ? -> 무한루프 (중단은 ctrl + c)
         // 조건식 자체를 그냥 비워두는 것도 가능 -> 조건이 없다? -> 무한 루프
         // 그냥 1 쓰는 것은 안된다.
-        for(int i=0; i<10; i++){
-            System.out.println(i);
-        }
+        // for(int i=0; i<10; i++){
+        //     System.out.println(i);
+        // }
 
-        while(true) {
-            System.out.println('1');
-        }
+        // while(true) {
+        //     System.out.println('1');
+        // }
 
     }
 }
