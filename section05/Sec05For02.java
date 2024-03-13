@@ -14,10 +14,10 @@ public class Sec05For02 {
          *      ★ 조건이 참인 동안 계속 수행
          * - for 문은 주어진 (또는 정해진) 조건 동안만 반복을 수행
          *      ★ 조건 동안만 계속 수행 / 배열과 함께 많이 사용
-         * 
          * 3. true, false, 1
          * - 일반적으로 프로그래밍 세계에서는 1 ~> true, 0 ~> false (다 그런것은 아님)
-         * - true 사용 ~> for, while 모두 가능 switch(true)
+         * - true 사용 ~> for, while 모두 가능 (보통 while 문에서 많이 사용하고 for문에서는 잘 사용하지 않는다.) while(true)
+         * - 1 사용 ~> 다른 프로그래밍 언어에서는 while(1) 이렇게 사용도 하지만, 자바에서는 명시적인 논리값을 사용 ~> while(true)
         */
     }
 }
