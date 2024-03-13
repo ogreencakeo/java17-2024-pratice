@@ -11,5 +11,19 @@ public class Sec05While01 {
         */
 
         // 기본 틀
+        /*
+         * 초기식;
+         * while(조건식) {
+         *      // ...
+         *      증감식;
+         * }
+         */
+
+         // 기본 예제
+        int i = 0;
+        while (i<10) {
+            System.out.println(i);
+            i++; // i 값 증가 후 다시 조건으로 올라가서 비교
+        }
     }
 }
