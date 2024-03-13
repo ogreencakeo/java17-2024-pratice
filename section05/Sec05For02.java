@@ -19,5 +19,18 @@ public class Sec05For02 {
          * - true 사용 ~> for, while 모두 가능 (보통 while 문에서 많이 사용하고 for문에서는 잘 사용하지 않는다.) while(true)
          * - 1 사용 ~> 다른 프로그래밍 언어에서는 while(1) 이렇게 사용도 하지만, 자바에서는 명시적인 논리값을 사용 ~> while(true)
         */
+
+        // [1] true 사용
+        // 1 ~ 10 반복 출력해서 for 조건식에 true 사용하면 ? -> 무한루프 (중단은 ctrl + c)
+        // 조건식 자체를 그냥 비워두는 것도 가능 -> 조건이 없다? -> 무한 루프
+        // 그냥 1 쓰는 것은 안된다.
+        for(int i=0; i<10; i++){
+            System.out.println(i);
+        }
+
+        while(true) {
+            System.out.println('1');
+        }
+
     }
 }
