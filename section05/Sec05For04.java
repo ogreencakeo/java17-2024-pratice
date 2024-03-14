@@ -28,5 +28,15 @@ public class Sec05For04 {
         //     break;
         //     System.out.println("Test");
         // }
+
+        // Question 1~10 까지 반복 시 사용자가 입력한 숫자의 배수가 몇 번 나오는지 출력하고 배수는 눈에 띄게 출력하시오.
+        int choiceNumber = 3;
+        int cnt = 0;
+        for(int i=1; i<=10; i++){
+            if(i % choiceNumber == 0){
+                cnt ++;
+            }
+        }
+        System.out.println("cnt :" + cnt);
     }
 }
