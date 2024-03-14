@@ -39,5 +39,11 @@ public class Sec05For03 {
         System.out.println(i+=1); // 3
         System.out.println(i+=1); // 4
 
+        int x = 100, y = 500;
+        System.out.println(x); // 100
+        System.out.println(x = 200); // 200
+        System.out.println(y = y+1); // 501
+        System.out.println(y+=1); // 201
+        System.out.println(y+=100); // 701
     }
 }
