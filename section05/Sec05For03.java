@@ -53,5 +53,19 @@ public class Sec05For03 {
         System.out.println(b+=1); // 2
         System.out.println(++c); // 2
         System.out.println(d = d+1); // 2
+
+        System.out.println();
+
+        // [4]
+        // 0 2 4 6 8 처럼 출력하시오
+        for(int number=0; number<10; number++){
+            if(number%2==0){
+                System.out.println("짝수 :" +number);
+            }
+            if(number%2!=0){
+                System.out.println("홀수 :" + number);
+            }
+        }
+
     }
 }
