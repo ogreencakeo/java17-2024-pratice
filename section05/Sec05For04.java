@@ -14,5 +14,13 @@ public class Sec05For04 {
             }
             System.out.println(i);
         }
+
+        // Question 1~20까지 for문으로 출력시 continue로 11~20까지 출력하시오
+        for(int i=1; i<=20; i++){
+            if(i<11){
+                continue;
+            }
+            System.out.println(i);
+        }
     }
 }
