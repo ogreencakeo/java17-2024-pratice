@@ -9,10 +9,10 @@ public class Sec05For04 {
         // Question. 1 ~ 20까지 for문으로 출력시 break로 10까지만 출력하시오.
         // 결과 예) 1 2 3 4 5 6 7 8 9 10
         for(int i=1; i<=20; i++){
-            System.out.println(i);
             if(i>10){
                 break;
             }
+            System.out.println(i);
         }
     }
 }
