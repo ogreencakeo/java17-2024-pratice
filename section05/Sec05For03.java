@@ -13,11 +13,31 @@ public class Sec05For03 {
 
         // [2]
         // 조건식 없이 무한루프에 빠져 나오려면 ~> break 사용
-        int i = 1;
-        for(; ; ){
-            System.out.println(i++);
-            if(i == 10) break;
+        // int i = 1;
+        // for(; ; ){
+        //     System.out.println(i++);
+        //     if(i == 10) break;
+        // }
+
+        // [3]
+        // 값을 증가시키는 다양한 방법
+        // [3-1]
+        // 0 2 4 6 8 처럼 출력하시오.
+        for(int i=0; i<10; i+=2){
+            System.out.println(i);
         }
+
+        // [3-2] 
+        // 1 3 5 7 9 처럼 출력하시오
+        for(int i=1; i<10; i+=2){
+            System.out.println(i);
+        }
+
+         // [3-3]
+        int i = 1;
+        System.out.println(i+=1); // 2
+        System.out.println(i+=1); // 3
+        System.out.println(i+=1); // 4
 
     }
 }
