@@ -22,5 +22,11 @@ public class Sec05For04 {
             }
             System.out.println(i);
         }
+
+        // break 키워드는 loop 바깥쪽에서는 사용안됨
+        // if(true){
+        //     break;
+        //     System.out.println("Test");
+        // }
     }
 }
