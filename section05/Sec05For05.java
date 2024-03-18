@@ -34,5 +34,19 @@ public class Sec05For05 {
                 System.out.printf("%d x %d = %d \n", i, j, i*j);
             }
         }
+
+        System.out.println();
+
+        // [3] 구구단 가로 출력
+        // 이런거 할 때는 그려놓고 생각해보자 (안그리고 할 때 보다 머릿속에 정리가 되는 편)
+        // 2x1=2  3x1=3  4x1=4 ....... 9x1=9
+        // 2x2=4  3x2=6  4x2=8 ....... 9x2=18
+        /// ...
+        for(int i=2; i<=9; i++){
+            for(int j=1; j<=9; j++){
+                System.out.printf("%d x %d = %d  ", i, j, i*j);
+            }
+            System.out.println();
+        }
     }
 }
