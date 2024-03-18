@@ -44,7 +44,31 @@ public class Sec05For05 {
         /// ...
         for(int i=1; i<=9; i++){
             for(int j=2; j<=9; j++){
-                System.out.printf("%d x %d = %2d  ", j, i, i*j);
+                System.out.printf("%d x %d = %2d\t", j, i, i*j);
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+
+        // [4] 보충강좌
+        // - 상단에 한 줄이 추가 => 바깥쪽 for문 => 10번 반복
+        // - 자릿수 정렬
+        // 2단           3단 
+        // 2 x 1 = 2     3 x 1 = 3
+        // 2 x 2 = 4     3 x 2 = 6
+        // 2 x 3 = 6     3 x 3 = 9
+        // 2 x 4 = 8     3 x 4 = 12
+        // 2 x 5 = 10   .......
+        // 2 x 6 = 12
+        // 2 x 7 = 14
+        // 2 x 8 = 16
+        // 2 x 9 = 18
+
+        for(int i=0; i<=9; i++){
+            for(int j=2; j<=9; j++){
+                if(i==0) System.out.printf("%d 단 \t", j);
+                else System.out.printf("%dx%d=%d \t", j, i, j*i);
             }
             System.out.println();
         }
