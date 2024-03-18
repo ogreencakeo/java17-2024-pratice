@@ -42,9 +42,9 @@ public class Sec05For05 {
         // 2x1=2  3x1=3  4x1=4 ....... 9x1=9
         // 2x2=4  3x2=6  4x2=8 ....... 9x2=18
         /// ...
-        for(int i=2; i<=9; i++){
-            for(int j=1; j<=9; j++){
-                System.out.printf("%d x %d = %d  ", i, j, i*j);
+        for(int i=1; i<=9; i++){
+            for(int j=2; j<=9; j++){
+                System.out.printf("%d x %d = %2d  ", j, i, i*j);
             }
             System.out.println();
         }
