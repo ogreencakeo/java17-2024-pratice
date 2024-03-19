@@ -21,15 +21,17 @@ public class Sec07Array02 {
         // System.out.println();
 
         // [2] 배열과 반복문 사용해서 출력
-        String memberName[] = {"Superman", "Batman", "Antman", "Wonderwoman"};
+        String memberName[] = {"Superman", "Batman", "Antman", "Wonderwoman", "Ironman"};
         int memberAge[] = {11, 22, 33};
+        String memberEmail[];
+        String memberHp[];
 
         // 배열의 길이
         System.out.println(memberName.length);  // 3
         System.out.println(memberAge.length);   // 3
 
         // 반복문 출력
-        for(int i=0; i<memberName.length; i++){
+        for(int i=0; i<memberAge.length; i++){
             System.out.printf("%d번 회원님의 이름은 %s이고, 나이는 %d살 입니다 \n", i+1, memberName[i], memberAge[i]);
         }
     }
