@@ -14,6 +14,13 @@ package Section06.ex01;
 //      - System.out.println(Math.min(100, 50)); // 50
 //      - System.out.println(Math.max(100, 50)); // 100
 
+// 3. public vs private
+//      - public -> private 변경하면 error
+
+// 4. static은 메서드 뿐만 아니라 변수, 상수에도 붙일 수 있음
+//      - Start.PI == Math.PI
+
+
 public class App {
     public static void main(String[] args) {
         System.out.println("== Hi ===");
@@ -34,14 +41,18 @@ public class App {
         System.out.println(pi);
 
         System.out.println(Start.PI); // 3.14
+        // Start 클래스에 public static final double PI에서 static을 지운다면
+        // System.out.println(new Start().PI);
     }
 }
 
 class Start{
     public static final double PI = 3.14;
+    // public static double PI = 3.14;
     
     // public void main(){
     public static void main(String str){
         System.out.println(str + "=== Start ===");
+        // PI = 4.14;
     }
 }
