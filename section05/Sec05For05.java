@@ -67,10 +67,16 @@ public class Sec05For05 {
 
         for(int i=0; i<=9; i++){
             for(int j=2; j<=9; j++){
-                if(i==0) System.out.printf("%d단 \t", j);
-                else System.out.printf("%dx%d=%d \t", j, i, j*i);
+                // 단 출력
+                if(i==0) {
+                    System.out.printf("%1d%-9s\t", j, "단");
+                    continue;
+                }
+                
+                System.out.printf("%d x %d = %-2d\t", j, i, j*i);
             }
             System.out.println();
         }
+
     }
 }
