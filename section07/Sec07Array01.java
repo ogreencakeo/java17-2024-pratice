@@ -27,5 +27,6 @@ public class Sec07Array01 {
         System.out.println(str[1]); // Batman
         System.out.println(str[2]); // Antman
         System.out.println(str[2] = "Ironman"); // Ironman
+        // System.out.println(str[3] = "Wonderwoman"); // Error
     }
 }
