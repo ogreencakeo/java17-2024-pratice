@@ -69,7 +69,8 @@ public class Sec05For05 {
             for(int j=2; j<=9; j++){
                 // 단 출력
                 if(i==0) {
-                    System.out.printf("%1d%-9s\t", j, "단");
+                    // System.out.printf("%1d%8s\t", j, "단");
+                    System.out.printf("%1d%9s\t", j, "A");
                     continue;
                 }
                 
