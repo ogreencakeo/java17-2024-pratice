@@ -47,8 +47,9 @@ public class App {
 }
 
 class Start{
-    public static final double PI = 3.14;
     // public static double PI = 3.14;
+    public static final double PI = 3.14;
+    // public final double PI = 3.14;
     
     // public void main(){
     public static void main(String str){
