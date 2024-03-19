@@ -30,5 +30,33 @@ public class Sec07Array01 {
         System.out.println(str[2]); // Antman
         System.out.println(str[2] = "Ironman"); // Ironman
         // System.out.println(str[3] = "Wonderwoman"); // Error
+
+        // [2] 배열의 여러가지 작성 방법
+        // [2-1]
+        // int num[] = new int[3]{100, 200, 300}; // Error ~> 초깃값이 저장되었기 때문
+        int num[] = new int[]{100, 200, 300};
+        System.out.println(num[0]); // 100
+        System.out.println(num[1]); // 200
+        System.out.println(num[2]); // 300
+
+        double num1[] = new double[4];
+        System.out.println(num1[0]); // 0.0
+        System.out.println(num1[1]); // 0.0
+
+        // [2-2]
+        // new 생략하고 배열 사용 ~> 보통 이 방법이 간편해서 많이 사용
+        int num2[] = {100, 200, 300};
+
+        System.out.println(num2[0]); // 100
+        System.out.println(num2[1]); // 200
+        System.out.println(num2[2]); // 300
+
+        // [2-4] String 배열
+        String animals[] = {"Tiger", "Lion", "Elephant"};
+
+        System.out.println(animals[0]); // Tiger
+        System.out.println(animals[1]); // Lion
+        System.out.println(animals[2]); // Elephant
+
     }
 }
