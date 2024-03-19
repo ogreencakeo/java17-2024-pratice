@@ -16,8 +16,10 @@ public class Sec07Array01 {
         System.out.println(nums[2] = 300); // 300
 
         // String 배열
-        String str[];         // 배열 선언
-        str = new String[3];   // 문자열 몇 개를 할당할 것인지를 설정
+        // String str[];         // 배열 선언
+        // str = new String[3];   // 문자열 몇 개를 할당할 것인지를 설정
+
+        String str[] = new String[3];
 
         str[0] = "Superman";
         str[1] = "Batman";
