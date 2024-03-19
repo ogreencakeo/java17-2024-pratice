@@ -1,0 +1,14 @@
+1. 자바 기본 코드
+public class App{
+    public static void main(String[] args){
+        System.out.println("Hello, World!");
+    }
+}
+
+public
+static
+void
+String[]
+System
+out
+println 
