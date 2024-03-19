@@ -5,9 +5,14 @@ public class App{
     }
 }
 
-public
-static
+public          접근 제한자, 접근 제한 지시자, 접근 제어자
+                객체가 가진 고유의 멤버 메서드, 필드 값을 외부에서 권한 없이 함부로 변경하는 것을 막기 위해
+                public : 접근 제한 X / private : 클래스 내에서만 접근 O
+
+static          인스턴스 생성 없이 프로그램 시작과 함께 사용하기 위해서 선언한 키워드
+
 void
+
 String[]
 System
 out
