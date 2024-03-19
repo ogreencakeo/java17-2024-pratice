@@ -38,7 +38,6 @@ public class App {
 }
 
 class Start{
-
     public static final double PI = 3.14;
     
     // public void main(){
