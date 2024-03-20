@@ -17,6 +17,8 @@ class AIPerson{
     String name;
     int age;
 
+    // 오버로딩
+    // 같은 이름을 가진 메서드가 서로 다른 매개변수를 갖는 것
     public void test(){
         System.out.println("Hello ~!");
     }
