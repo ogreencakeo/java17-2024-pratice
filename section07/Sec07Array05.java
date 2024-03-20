@@ -6,10 +6,37 @@ public class Sec07Array05 {
 
         // 2차원 배열 데이터
         int stuScore[][] = {
-            {55, 90, 80},
-            {75, 40, 50},
-            {50, 50, 90, 50, 60, 40},
-            {50, 50, 90},
+            {70, 80, 60},
+            {75, 85, 65, 90, 80},
+            {80, 70, 90}
         };
+
+        // 출력
+        int stuTotalCnt = 0; // 학생들을 세는 변수
+        int stuTotalScore = 0;
+
+        System.out.println("스카이 아카데미 학생 성적표");
+        System.out.println("================================");
+
+        for(int i=0; i<stuScore.length; i++){
+            int totalScore = 0;
+            
+            System.out.print(i + 1 +"번 학생 국/영/수 성적표 = ");
+            for(int j=0; j<stuScore[i].length; j++){
+                System.out.print(stuScore[i][j] + ", ");
+
+                // 총점
+                totalScore += stuScore[i][j];
+                stuTotalScore += stuScore[i][j];
+
+                // 총 학생수
+                stuTotalCnt++;
+            }
+            System.out.print(i+1+"번 학생의 총점 : " + totalScore + ", 평균은 " + (double)totalScore/stuScore[i].length+"점");
+            System.out.println();
+        }
+
+        System.out.printf("전체 학생의 총점 : %d점, 전체 학생의 평균 %.2f점\n", stuTotalScore, stuTotalScore / (double)stuTotalCnt);
+        System.out.println("================================");
     }
 }
