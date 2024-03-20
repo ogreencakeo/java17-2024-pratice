@@ -5,7 +5,12 @@ public class se01Class02 {
         // 가장 기본적인 형태의 Person 클래스를 만들어보시오.
         // 지금 여기는 프로그램 진입점 역할을 하는 main 메서드안이라는 것을 까먹지 말자.
         // 여기서는 주로 객체를 생성하여 사용하는 코드를 작성
-        new Person();
+        Person p1 = new Person();
+        p1.walk();
+        System.out.println(p1.name); // null
+        System.out.println(p1.email); // null
+        System.out.println(p1.age); // null
+
     }
 }
 
@@ -24,9 +29,7 @@ class Person{
     // 이 디폴트 생성자 조차도 안쓰고 작성하는게 가능
     // 생성자가 클래스내에 하나도 없다면 내용없는 디폴트 생성자가 기본 제공되는 것과 마찬가지
 
-    Person(){
-
-    }
+    Person(){};
 
     // Method (함수, 메서드)
     public void walk(){
