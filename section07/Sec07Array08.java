@@ -22,10 +22,33 @@ public class Sec07Array08 {
             System.out.print((x*=10) + ", ");
 
         System.out.println();
-        
         // 1차원 배열 - string
         String[] animals = new String[]{"Lion", "Tiger", "Hipo", "Elephant"};
         for(String s: animals)
-            System.out.print(s + ", ");
+        System.out.print(s + ", ");
+        
+        System.out.println();
+        // [2] 2차원 배열
+        int[][] arr2 = new int[][]{
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9},
+        };
+        
+        // 기존 for문 사용
+        for(int i=0; i<arr2.length; i++){
+            for(int j=0; j<arr2[i].length; j++){
+                System.out.print(arr2[i][j] + ", ");
+            }
+        }
+
+        System.out.println();
+
+        // 향상된 for문 사용 -> 처음에 조금 헷갈리고 어려울 수 있음
+        for(int[] x : arr2){
+            for(int j :x){
+                System.out.print(j + ", ");
+            }
+        }
     }
 }
