@@ -11,6 +11,10 @@ public class se01Class02 {
         System.out.println(p1.email); // null
         System.out.println(p1.age); // null
 
+        Person p2 = new Person("superman", "superman@gmail.com", 20);
+        System.out.println(p2.name); // superman
+        System.out.println(p2.email); // superman@gmail.com
+        System.out.println(p2.age); // 20
     }
 }
 
@@ -30,6 +34,12 @@ class Person{
     // 생성자가 클래스내에 하나도 없다면 내용없는 디폴트 생성자가 기본 제공되는 것과 마찬가지
 
     Person(){};
+
+    Person(String name, String email, int age){
+        this.name = name;
+        this.email = email;
+        this.age = age;
+    }
 
     // Method (함수, 메서드)
     public void walk(){
