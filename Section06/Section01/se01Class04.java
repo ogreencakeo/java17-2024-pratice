@@ -15,7 +15,7 @@ public class se01Class04 {
         // - 접근제한자는 생략이 가능 -> 생략하면 default 접근제한자 적용 -> 같은 패키지내에서는 사용 가능
 
         // - 메서드는 호출 할 때 값을 여러개 넣어서 호출 할 수 있는데 -> 이를 "인수" 또는 "인자"
-        // - 메서드느 호출한 쪽으로 메서드 수행의 결과값을 되돌려 줄 수 있음 -> 반환값
+        // - 메서드는 호출한 쪽으로 메서드 수행의 결과값을 되돌려 줄 수 있음 -> 반환값
         // - 호출한 쪽에서는 반환값을 받아서 다음 작업을 진행시켜 나갈 수 있음
         // - 반환값이 없는 경우 반환값 타입은 -> void
         // - 따라서, void 이외의 타입을 메서드 만들 때 지정했다면 -> return문을 사용해서 타입이 일치하는 값을 반드시 반환
@@ -25,7 +25,7 @@ public class se01Class04 {
         //      반환값이 없는 메서드 vs 반환값이 있는 메서드
 
         // 객체 생성
-        Person p1 = new Person("Superman", 20, 75.5);
+        Person01 p1 = new Person01("Superman", 20, 75.5);
         p1.printInfo();             // 20살
         p1.setAge(40);              // 인수를 넣어서 메서드 호출
         p1.printInfo();             // 40살
@@ -36,15 +36,15 @@ public class se01Class04 {
     }
 }
 
-class Person{
+class Person01{
     // Field
     String name;
     int age;
     double weight;
 
     // Constructor
-    Person(){}
-    Person(String a, int b, double c){
+    Person01(){}
+    Person01(String a, int b, double c){
         this.name = a;
         this.age = b;
         this.weight = c;
