@@ -41,7 +41,7 @@ public class MemberUI {
                 case 1:
                     System.out.println("\n");
                     System.out.println(">> 1번 회원 입력을 선택했습니다.");
-                    action.memberInsert();
+                    action.memberInsert(sc);
                     System.out.println("\n");
                     break;
                 case 2 :
