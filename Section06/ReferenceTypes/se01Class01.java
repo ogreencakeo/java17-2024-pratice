@@ -3,15 +3,22 @@ package Section06.ReferenceTypes;
 public class se01Class01 {
     public static void main(String[] args) {
         
-        // Swap swap = new Swap();
+        Swap swap = new Swap();
 
-        Mynum m1 = new MyNum(100);
+        Mynum m1 = new Mynum(100);
+        Mynum m2 = new Mynum(200);
+        System.out.println(m1.value + ", " + m2.value); // 100, 200
+
+        // swap.swapTest(m1.value, m2.value); // int 타입의 기본형으로 전달
+        swap.swapTest(m1, m2); // 참조형 타입
         
     }
 }
 
 class Mynum{
+    int value;
     
+    Mynum(int a){ this.value = a; }
 }
 
 class Swap{
@@ -31,9 +38,7 @@ class Swap{
         System.out.println("바꾸기 완료후 y = " + y);
     }
 
-    public void swapTest(int x, int y){
-        System.out.println("x = " + x);
-        System.out.println("y = " + y);
+    public void swapTest(Mynum x, Mynum y){
 
         swap(x, y); 
     }
