@@ -6,5 +6,5 @@ package Project;
 // - Array -> ArrayList ~> File DB ~> DB(Oracle, MYSQL, SQL Server...)
 
 public class MemberData {
-    MemberDTO members[] = new MemberDTO[5];
+    static MemberDTO members[] = new MemberDTO[5];
 }

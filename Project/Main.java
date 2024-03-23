@@ -4,6 +4,10 @@ package Project;
 
 public class Main {
     public static void main(String[] args) {
+
+        // 배열 테스트
+        // System.out.println(MemberData.members.length); // 5
+
         // 메뉴 보여주기
         MemberUI ui = new MemberUI();
         ui.menu();
