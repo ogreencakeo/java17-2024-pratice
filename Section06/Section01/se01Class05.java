@@ -31,5 +31,8 @@ class Swap{
         System.out.println("y = " + y);
 
         swap(x, y); 
+
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
     }
 }
