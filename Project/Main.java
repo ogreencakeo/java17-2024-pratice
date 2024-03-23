@@ -5,8 +5,8 @@ package Project;
 public class Main {
     public static void main(String[] args) {
         // 메뉴 보여주기
-        // MemberUI ui = new MemberUI();
-        // ui.menu();
+        MemberUI ui = new MemberUI();
+        ui.menu();
 
         // MemberDTO 사용해보기
         // MemberDTO m1 = new MemberDTO(0, "Superman", "010-111-111", "superman@gamil.com");
@@ -18,7 +18,7 @@ public class Main {
         // m1.printInfo();
 
         // toString 메소드
-        MemberDTO m1 = new MemberDTO(0, "Superman", "010-111-111", "superman@gamil.com");
-        System.out.println(m1); // System.out.println(m1.toString()); 똑같이 출력됨.
+        // MemberDTO m1 = new MemberDTO(0, "Superman", "010-111-111", "superman@gamil.com");
+        // System.out.println(m1); // System.out.println(m1.toString()); 똑같이 출력됨.
     }   
 }

@@ -40,7 +40,6 @@ public class MemberDTO {
     //     System.out.printf("MemberDTO[ no : %d, name : %s, hp : %s, eml : %s ] \n",
     //         no, name, hp, eml);
     // }
-
     @Override
     public String toString(){
         return "MemberDTO [ no = " + no + ", name = " + name + ", hp = " + hp + ", eml = " + eml + " ]";

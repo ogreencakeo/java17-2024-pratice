@@ -11,9 +11,14 @@ public class MemberAction {
         System.out.print("전화 >> ");
         String hp = sc.next();
         System.out.print("이메일 >> ");
-        String email = sc.next();
-        System.out.printf("회원정보 : [이름 : %s, 전화번호 : %s, 메일 : %s]\n",
-                            name, hp, email);
+        String eml = sc.next();
+
+        // 회원 카운트 넘버 세기 -> 배열에 회원 몇명 들어있는지 체크
+        int cnt = 0;
+        
+        // 사용자 입력을 통해 받은 값으로 memberDTO 객체 생성
+        MemberDTO member = new MemberDTO(cnt, name, hp, eml);
+        System.out.println(member);
     }
 
     public void memberInsertOk(){
