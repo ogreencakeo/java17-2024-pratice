@@ -5,6 +5,7 @@ import java.util.Scanner;
 // 회원 한 명에 대한 객체 정보를 실제적으로 처리하는 여러 액션 작업을 수행하는 클래스
 
 public class MemberAction {
+    // 회원 입력
     public void memberInsert(Scanner sc){
         System.out.print("이름 >> ");
         String name = sc.next();
@@ -24,8 +25,9 @@ public class MemberAction {
         memberInsertOk(member);
     }
 
+    // 입력 요청
     public void memberInsertOk(MemberDTO member){
-        MemberData.members[memberCount()] = member;
+        MemberData.members[member.getNo()] = member;
     }
 
     // 회원리스트

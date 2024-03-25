@@ -24,6 +24,7 @@ public class MemberDTO {
     }
 
     // Setter Method
+    public int getNo(){return no;}
     
     // Getter Method 
 
