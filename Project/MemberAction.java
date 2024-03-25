@@ -19,9 +19,19 @@ public class MemberAction {
         // 사용자 입력을 통해 받은 값으로 memberDTO 객체 생성
         MemberDTO member = new MemberDTO(cnt, name, hp, eml);
         System.out.println(member);
+
+        // 입력 요청
+        memberInsertOk(member);
     }
 
-    public void memberInsertOk(){
-        System.out.println("== 회원 객체 한 명을 배열에 저장하는 메서드 ==");
+    public void memberInsertOk(MemberDTO member){
+        MemberData.members[0] = member;
+    }
+
+    public void memberList(){
+        for(MemberDTO m : MemberData.members){
+            if(m == null) break;
+            else System.out.println(m);
+        }
     }
 }

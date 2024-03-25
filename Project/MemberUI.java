@@ -46,7 +46,8 @@ public class MemberUI {
                     break;
                 case 2 :
                     System.out.println("\n");
-                    System.out.println(">> 2번 회원 입력을 선택했습니다.");
+                    System.out.println(">> 2번 회원 목록을 선택했습니다.");
+                    action.memberList();
                     System.out.println("\n");
                     break;
                 case 0 :
