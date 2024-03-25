@@ -1,6 +1,6 @@
 package section08;
 
-public class sec08AbstractClass04 {
+public class Sec08AbstractClass04 {
     public static void main(String[] args) {
         // 추상 클래스 - 연습문제
         // - 추상 클래스 내 추상 메서드의 접근 제한자를 private으로 바꾸면 어떤 일들이 벌어지는지 말해보시오.

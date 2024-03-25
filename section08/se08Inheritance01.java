@@ -1,6 +1,6 @@
 package section08;
 
-public class se08Inheritance01 {
+public class Se08Inheritance01 {
     public static void main(String[] args) {
         // 상속
         // - 프로그램의 시작점인 main 메서드에서는 자식 객체를 생성하는 코드 작성

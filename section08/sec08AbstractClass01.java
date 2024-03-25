@@ -1,6 +1,6 @@
 package section08;
 
-public class sec08AbstractClass01 {
+public class Sec08AbstractClass01 {
     public static void main(String[] args) {
         // 추상 클래스(Abstract class) - 강제성을 지님
         // - 메서드 선언은 선언대로 하고, 구현은 구현대로 분리해서 만들자! -> 인터페이스까지 이어지는 과정

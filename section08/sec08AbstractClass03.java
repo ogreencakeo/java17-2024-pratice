@@ -1,6 +1,6 @@
 package section08;
 
-public class sec08AbstractClass03 {
+public class Sec08AbstractClass03 {
     public static void main(String[] args) {
         // 객체 생성
         Dog2 d1 = new Dog2("강아지", 5);

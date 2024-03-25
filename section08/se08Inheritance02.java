@@ -1,6 +1,6 @@
 package section08;
 
-public class se08Inheritance02 {
+public class Se08Inheritance02 {
     public static void main(String[] args) {
         // 상속 (Inheritance)
         // - 부모 클래스와 자식 클래스 모두에 work 메서드가 있을 때 자식 객체가 work() 호출 시 어떻게 될까? 에러..?

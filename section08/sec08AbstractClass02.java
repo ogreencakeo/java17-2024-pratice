@@ -1,5 +1,5 @@
 package section08;
-public class sec08AbstractClass02 {
+public class Sec08AbstractClass02 {
     public static void main(String[] args) {
         // 추상 클래스 - 연습문제
         // - Animal 부모 클래스와 Dog, Cat, Cow 등의 자식 클래스 사이에서 상속 구현을 추상 클래스로 구현해보시오.
