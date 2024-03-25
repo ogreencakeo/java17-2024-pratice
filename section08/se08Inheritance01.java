@@ -7,11 +7,16 @@ public class se08Inheritance01 {
         // - 부모 클래스, 자식 클래스를 별도의 클래스로 각각 만들어 놓고 상속을 구현하여 실행
     
         // 자식 객체 생성 -> 인자가 없는 값들은 초깃값으로 셋팅
-        Child c1 = new Child("홍길동", 22); 
+        Child c1 = new Child("홍길동", 22, "홍"); 
         c1.printInfo(); // 이름은 홍길동, 나이는 22, 키는 0.000000 cm, 몸무게 0.000000 kg입니다.
 
-        Student s1 = new Student("이순신", 30, 175, 70);
-        s1.printInfo();
+        c1.height = 180.5;
+        c1.weight = 85.5; // 이름은 홍길동, 나이는 22, 키는 180.50cm, 몸무게 85.50kg입니다. 
+        c1.printInfo();
+        c1.work(); // 홍 객체는 일하는 중입니다.
+
+        Parent p1 = new Parent();
+        p1.printInfo(); // 이름은 null, 나이는 0, 키는 0.00cm, 몸무게 0.00kg입니다.
     }
 }
 
@@ -32,26 +37,18 @@ class Parent{
 
 class Child extends Parent{
     // Field
+    String nickName;
 
     // Constructor
-    Child(String name, int age){
+    Child(String name, int age, String nickName){
         this.name = name;
         this.age = age;
+        this.nickName = nickName;
     }
-
+    
     // Method
-}
-
-class Student extends Parent{
-    // Field
-
-    // Constructor
-    Student(String name, int age, double height, double weight){
-        this.name = name;
-        this.age = age;
-        this.height = height;
-        this.weight = weight;
+    // 부모 클래스에는 없는 자식 클래스만의 속성(필드), 기능(메서드)를 새롭게 추가
+    public void work(){
+        System.out.println(nickName + " 객체는 일하는 중입니다.");
     }
-
-    // Method
 }
