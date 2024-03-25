@@ -14,7 +14,7 @@ public class MemberAction {
         String eml = sc.next();
 
         // 회원 카운트 넘버 세기 -> 배열에 회원 몇명 들어있는지 체크
-        int cnt = 0;
+        int cnt = memberCount();
         
         // 사용자 입력을 통해 받은 값으로 memberDTO 객체 생성
         MemberDTO member = new MemberDTO(cnt, name, hp, eml);
@@ -25,13 +25,26 @@ public class MemberAction {
     }
 
     public void memberInsertOk(MemberDTO member){
-        MemberData.members[0] = member;
+        MemberData.members[memberCount()] = member;
     }
 
+    // 회원리스트
     public void memberList(){
+        System.out.println("=== 현재 배열의 길이 : " + MemberData.members.length + " ===");
         for(MemberDTO m : MemberData.members){
             if(m == null) break;
             else System.out.println(m);
         }
     }
+
+    // 카운트 증가
+    public int memberCount(){
+        int cnt = 0;
+        for(MemberDTO m : MemberData.members){
+            if(m == null) break;
+            else cnt++;
+        }
+        return cnt;
+    }
+
 }
