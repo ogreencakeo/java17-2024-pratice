@@ -7,6 +7,14 @@ import java.util.Scanner;
 public class MemberAction {
     // 회원 입력
     public void memberInsert(Scanner sc){
+        // 회원 추가 입력 가능한지 체크
+        int a = MemberData.members.length;
+        int b = memberCount();
+        if(b >= a){
+            System.out.println("Sorry..! 배열이 꽉 찼습니다.");
+            return;
+        }
+        
         System.out.print("이름 >> ");
         String name = sc.next();
         System.out.print("전화 >> ");
