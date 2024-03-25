@@ -33,6 +33,7 @@ public class MemberAction {
     // 회원리스트
     public void memberList(){
         System.out.println("=== 현재 배열의 길이 : " + MemberData.members.length + " ===");
+        System.out.println("현재 회원의 수 : " + memberCount() + "명 ");
         for(MemberDTO m : MemberData.members){
             if(m == null) break;
             else System.out.println(m);

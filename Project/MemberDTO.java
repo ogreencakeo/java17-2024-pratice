@@ -24,9 +24,22 @@ public class MemberDTO {
     }
 
     // Setter Method
-    public int getNo(){return no;}
+    public void setNo(){}
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setHp(String hp){
+        this.hp = hp;
+    }
+    public void setEml(String eml){
+        this.eml = eml;
+    }
     
     // Getter Method 
+    public int getNo(){return this.no;}
+    public String getName(){return this.name;}
+    public String getHp(){return this.hp;}
+    public String getEml(){return this.eml;}
 
     // toString Method
     // 1. 하는 역할 : 객체(인스턴스)에 대한 정보를 문자열로 반환
