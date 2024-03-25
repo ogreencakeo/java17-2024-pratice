@@ -7,17 +7,20 @@ public class sec08AbstractClass01 {
         
         // 객체 생성
         Student s1 = new Student("대학생", 20);
-        s1.eat(); // 오버라이딩
-        System.out.println(s1.name); // 대학생
-        System.out.println(s1.age); // 20
+        System.out.printf("s1 객체 => name : %s, age : %d \n", s1.name, s1.age );
+        s1.work();
 
         Nurse n1 = new Nurse("간호사", 25);
-        n1.eat();
-        
+        System.out.printf("n1 객체 => name : %s, age : %d \n", n1.name, n1.age );
+        n1.work();
+
+        Fireman f1 = new Fireman("소방관", 30);
+        System.out.printf("f1 객체 => name : %s, age : %d \n", f1.name, f1.age );
+        f1.work();
     }
 }
 
-class Person{
+abstract class Person{
     // Field
     String name;
     int age;
@@ -30,7 +33,9 @@ class Person{
     }
 
     // Method
-    public void eat(){
+    public abstract void work(); // 강제성 있음
+
+    public void eat(){ 
         System.out.println("밥 먹고 있는 중...");
     }
 }
@@ -42,9 +47,12 @@ class Student extends Person{
     }
 
     // Method
-    public void eat(){
-        System.out.println(name + "이(가) 밥 먹고 있는 중...");
+    // 자식이 상속 받은 상태에서는 정상적이게 구현해야 함. -> 오버라이딩하여 사용해야함
+    @Override // 어노테이션 ~> 애너 주석을 달다
+    public void work() {
+        System.out.println(name + " 공부하는 중");
     }
+    
 }
 
 class Nurse extends Person{
@@ -53,8 +61,20 @@ class Nurse extends Person{
         this.age = age;
     }
 
-    // Method
-    public void eat(){
-        System.out.println(name + "이(가) 밥 먹고 있는 중...");
+    @Override
+    public void work(){
+        System.out.println(name + " 간호하는 중");
+    }
+}
+
+class Fireman extends Person{
+    Fireman(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public void work(){
+        System.out.println(name + " 불끄는 중 ");
     }
 }
