@@ -1,4 +1,4 @@
-package section07;
+package Section07;
 
 // 9
 // arr[2] 출력 => 9

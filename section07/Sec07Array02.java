@@ -1,4 +1,4 @@
-package section07;
+package Section07;
 
 public class Sec07Array02 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package section08;
+package Section08;
 
 public class Sec08AbstractClass05 extends Sum{
     public static void main(String[] args) {

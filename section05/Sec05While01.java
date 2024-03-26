@@ -1,4 +1,4 @@
-package section05;
+package Section05;
 
 public class Sec05While01 {
     public static void main(String[] args) {

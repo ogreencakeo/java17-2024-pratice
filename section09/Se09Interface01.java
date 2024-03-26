@@ -1,4 +1,4 @@
-package section09;
+package Section09;
 
 // 인터페이스(Interface)
 

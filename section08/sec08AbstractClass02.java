@@ -1,4 +1,4 @@
-package section08;
+package Section08;
 public class Sec08AbstractClass02 {
     public static void main(String[] args) {
         // 추상 클래스 - 연습문제

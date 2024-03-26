@@ -1,4 +1,4 @@
-package section08;
+package Section08;
 
 public class Se08Inheritance02 {
     public static void main(String[] args) {
