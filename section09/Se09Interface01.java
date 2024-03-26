@@ -1,4 +1,4 @@
-package section08;
+package section09;
 
 // 인터페이스(Interface)
 
@@ -18,7 +18,7 @@ package section08;
 // - 상속과 구현 동시 사용하는 extends 키워드 먼저 사용
 //      ex) class 클래스명 extends 부모클래스명 implements 인터페이스명 { ... }
 
-public class Se08Interface01 {
+public class Se09Interface01 {
     public static void main(String[] args) {
         // 인터페이스(Interface)
 
