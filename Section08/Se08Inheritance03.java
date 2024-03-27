@@ -13,6 +13,17 @@ package Section08;
 
 public class Se08Inheritance03 {
     public static void main(String[] args) {
+        // 객체 생성
+        // UStudent 객체 생성을 먼저 하고, 그 다음에 UPerson 객체를 생성
+        UStudent student1 = new UStudent("제주대", 3);
+        UPerson person1 = new UPerson("홍길동", 23, student1);
+        
+        System.out.println("이름 : " + person1.name);
+        System.out.println("나이 : " + person1.age);
+        // private로 되어있기 때문에 get으로 호출해야 함
+        System.out.println("학교 : " + person1.getStudent().university);
+        System.out.println("학년 : " + person1.getStudent().grade);
+        System.out.println(person1); // [ 이름 : 홍길동, 나이 : 23, 학교 : 제주대, 학년 : 3]
         
     }
 }
@@ -37,6 +48,12 @@ class UPerson{
 
     public UStudent getStudent(){
         return student;
+    }
+
+    @Override
+    public String toString(){
+        return "[ 이름 : " + this.name + ", 나이 : " + this.age + 
+            ", 학교 : " + this.getStudent().university + ", 학년 : " + this.getStudent().grade + " ]";
     }
 }
 
