@@ -1,10 +1,8 @@
 package Section09;
 
-// 디폴트 메서드에서 인터페이스내 추상 메서드 호출하기
-
-
 public class Se09Interface09 {
     public static void main(String[] args) {
+        // 디폴트 메서드에서 인터페이스내 추상 메서드 호출하기
         // 객체 생성
         B b = new B();
         C c = new C();
