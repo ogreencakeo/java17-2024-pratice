@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Se09IO01 {
+public class Se10IO_01 {
     public static void main(String[] args) throws IOException {
         // 자바 입출력
         // - 특정 디렉토리 경로에 텍스트 파일이 존재하지 않으면 생성하고 파일에 Hello, world! 글자를 써보시오.
