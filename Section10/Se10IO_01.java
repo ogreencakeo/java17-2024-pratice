@@ -25,14 +25,29 @@ public class Se10IO_01 {
         File file = new File(filepath); // Alt + Shif + O
 
         // 파일이 존재하는지 유무 체크 ~> exists() 메서드 사용
-        if(!file.exists()) file.createNewFile();
+        // createNewFile() 없어도 새로운 파일을 생성해줌.
+        // FileWriter() 때문...
+        // ★ 잠깐 생각해보자
+        //      1. exists 메서드를 사용하지 않아도 자동으로 해당 파일명으로 파일이 생성
+        //      2. 아니? 자동으로 생성해주면 뭐하러 이 메서드를 쓰지? 굳이 안써도 되는거 아니야?
+        //      3. 그러나, 코드의 목적과 상황에 따라서 코드 가독성이나 없을 때의 예외처리 등을 위해서 사용하면 유용 
+        //      4. 즉, 파일 존재 유무를 체크하지 않으면 무조건 파일을 생성하지만, 
+        //      5. 유무를 체크하면 파일이 없을 때 다른 코드 작성도 가능 (권한 문제로 파일 생성이 안될 수도 있고...)
+        //      6. 파일 용량을 체크할 때 ~> 파일이 존재하지 않으면 0을 반환하므로, 확인 전 파일 유무를 체크하는 것이 필요!
+        if(!file.exists()) {
+            System.out.println("파일이 존재하지 않습니다. 파일을 자동으로 생성하겠습니다.");
+            file.createNewFile();
+        }
         
-        // 파일 쓰기
         // 파일 쓰기 - 덮어쓰기, 이어 붙이기 중 옵션 설정
         // false - 이어 붙이기 안함, true - 이어 붙이기 함
-        // FileWriter fw = new FileWriter(file, true);
-        FileWriter fw = new FileWriter(file, false);
-        fw.write("Hello, world!");
+        //  FileWriter fw = new FileWriter(file, true); // 기본값 false
+        FileWriter fw = new FileWriter(file, true);
+        // FileWriter fw = new FileWriter(file, false);
+        fw.write("\nHello, world!\n");
+        fw.write("a\n");
+        fw.write("b\n");
+        fw.write("c\n");
         fw.close();
     }
 }
