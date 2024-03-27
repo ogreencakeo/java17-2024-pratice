@@ -18,6 +18,9 @@ public class Se09Interface09 {
         System.out.println("b.nextValue() => " + b.nextValue()); // 2
         System.out.println("c.nextValue() => " + c.nextValue()); // 101
         System.out.println("---------------------------------");
+
+        // 인터페이스 내 정적 메서드 호출 ~> 인터페이스명.메서드명()
+        System.out.println(A.maxValue()); // 1000
     }
 }
 
@@ -28,6 +31,11 @@ interface A{
     default int nextValue(){
         int result = startValue() + 1;
         return result;
+    }
+
+    // Static Method : 정적 메서드
+    static int maxValue(){
+        return 1_000;
     }
 }
 
