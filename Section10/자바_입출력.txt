@@ -1,0 +1,19 @@
+자바 입출력
+
+체크 사항
+- PrintWriter, FileWriter 클래스 모두 파일에 쓰기를 할 수 있다.
+- 생성자를 사용해 스트림을 생성하며, 쓰기할 출력 파일이 존재하지 않으면 파일을 생성
+- 코드상에 따로 File 클래스의 파일 생성 메서드인 createNewFile() 메서드가 없어도 경로에 출력 파일이 없으면 파일 생성
+- 이유 ~> 두 클래스 생성자로 File 클래스의 인스턴스(객체)를 전달하기 때문
+- FileWriter(File file), PrintWriter(File file) ~> 생성자는 이것 말고도 더 있음
+
+- 기본적으로 PrintWriter, FileWriter 클래스는 Writer 클래스를 상속
+        java.lang.Object
+            java.io.Writer
+                java.io.PrintWriter     java.OutputStreamWriter
+                                            java.io.FileWriter
+
+FileWriter vs PrintWriter 차이점
+- PrintWriter는 FileWriter보다 더 확장 된 클래스
+- PrintWriter는 FileWriter의 기능을 제공하면서 추가로 다양한 출력 형식을 지정
+- FileWriter는 단순 파일 입출력에 적합, PrintWriter는 형식 지정된 출력이나 출력 버퍼링이 필요한 경우 사용
