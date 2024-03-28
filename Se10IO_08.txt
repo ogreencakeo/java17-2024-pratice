@@ -1,0 +1,15 @@
+[ name : Superman, age : 20, eml : superman@gmail.com ]
+[ name : Batman, age : 20, eml : batman@gmail.com ]
+[ name : Antman, age : 20, eml : antman@gmail.com ]
+[ name : Wonderwomen, age : 20, eml : wonderwomen@gmail.com ]
+[ name : Batgirl, age : 20, eml : batgirl@gmail.com ]
+[ name : Superman, age : 20, eml : superman@gmail.com ]
+[ name : Batman, age : 20, eml : batman@gmail.com ]
+[ name : Antman, age : 20, eml : antman@gmail.com ]
+[ name : Wonderwomen, age : 20, eml : wonderwomen@gmail.com ]
+[ name : Batgirl, age : 20, eml : batgirl@gmail.com ]
+Superman, 20, superman@gmail.comBatman, 20, batman@gmail.comAntman, 20, antman@gmail.comWonderwomen, 20, wonderwomen@gmail.comBatgirl, 20, batgirl@gmail.comSuperman, 20, superman@gmail.com
+Batman, 20, batman@gmail.com
+Antman, 20, antman@gmail.com
+Wonderwomen, 20, wonderwomen@gmail.com
+Batgirl, 20, batgirl@gmail.com
