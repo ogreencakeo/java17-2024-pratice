@@ -3,6 +3,7 @@ package Section10;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 public class Se10IO_09 {
     public static void main(String[] args) {
@@ -36,12 +37,29 @@ public class Se10IO_09 {
             // FileOutputStram 클래스를 사용해서도 텍스트 파일에 쓰기를 할 수 있다. 단, 얘는 바이트 단위로 쓰기
             // 바이트 단위로 입력/출력이 되는 클래스 ~> 보통 클래스명이 Stream으로 끝난다.
             // 문자(char) 단위로 입력/출력이 되는 클래스 ~> 보통 클래스명이 Reader/Writer로 끝난다.
-            FileOutputStream writer = new FileOutputStream(file, true);
-            writer.write(97); // a 
-            writer.write(65); // A 
-            writer.write('b'); // b
-            writer.write('B'); // B
+            FileOutputStream writer = new FileOutputStream(file, false);
+            writer.write(97);               // a 
+            writer.write(65);               // A 
+            writer.write('b');              // b
+            writer.write('B');              // B
+            writer.write('A' + 32);           // 65 + 32 = 97 ~> a
+            writer.write('A' + 32 + 25);      // 122 ~> z
+            writer.write(122);              // z
+            // writer.write('가');    // 한글은 2바이트로 표현되는데, 이를 1바이트로 출력하기 때문
+            // writer.write("가".getBytes());
+            writer.write("안녕하세요~".getBytes(StandardCharsets.UTF_8));
 
+            // 한글 또는 문자열은 어떻게 파일에 쓰지?
+            // 해결 방법
+            //      1. 문자 기반 스트림 클래스 사용 ~> FileWriter
+            //      2. getBytes() 메서드 사용 ~> "안녕하세요".getBytes()
+
+            // getBytes() 메서드
+            //      - 문자열을 바이트 배열로 변환 메서드
+            //      - byte[] bytes = str.getBytes(); ~> 일반적인 형태
+            //      - byte[] bytes = str.getBytes( StandardCharsets.UTF_8 ); ~> 한글이 깨진다면 이렇게 해주면 보통 다 됨
+            
+            writer.flush();
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
