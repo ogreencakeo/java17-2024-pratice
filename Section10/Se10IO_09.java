@@ -22,14 +22,6 @@ public class Se10IO_09 {
         // - 공식문서도 자주 보고.. 클래스 계층구조도 자주 보고... 본거 또 보고.. 하는 수 밖에 없음
         // - 보기만 하면 안되고 자꾸 타이핑 치고 써봐야 오래 기억
 
-        // MemberDTO 객체 생성
-        MemberDTO members[] = new MemberDTO[5];
-        members[0] = new MemberDTO("Superman", 20, "superman@gmail.com");
-        members[1] = new MemberDTO("Batman", 20, "batman@gmail.com");
-        members[2] = new MemberDTO("Antman", 20, "antman@gmail.com");
-        members[3] = new MemberDTO("Wonderwomen", 20, "wonderwomen@gmail.com");
-        members[4] = new MemberDTO("Batgirl", 20, "batgirl@gmail.com");
-    
         File file = new File("Se10IO_09.txt");
         
         try {
@@ -73,30 +65,4 @@ public class Se10IO_09 {
             e.printStackTrace();
         }
     }
-}
-
-class MemberDTO{
-    // Field
-    String name;
-    int age;
-    String eml;
-
-    // Constructor
-    MemberDTO(String name, int age, String eml){
-        this.name = name;
-        this.age = age;
-        this.eml = eml;
-    }
-
-    // Setter Method
-    @Override
-    public String toString(){
-        return "[ name : " + this.name + ", age : " + this.age + ", eml : " + this.eml + " ]\n";
-    }
-
-
-    // Getter Method
-    String getName(){return this.name;}
-    int getAge(){return this.age;}
-    String getEml(){return this.eml;}
 }
