@@ -37,6 +37,7 @@ public class Se10IO_09 {
             // FileOutputStram 클래스를 사용해서도 텍스트 파일에 쓰기를 할 수 있다. 단, 얘는 바이트 단위로 쓰기
             // 바이트 단위로 입력/출력이 되는 클래스 ~> 보통 클래스명이 Stream으로 끝난다.
             // 문자(char) 단위로 입력/출력이 되는 클래스 ~> 보통 클래스명이 Reader/Writer로 끝난다.
+            
             FileOutputStream writer = new FileOutputStream(file, false);
             writer.write(97);               // a 
             writer.write(65);               // A 
@@ -47,7 +48,14 @@ public class Se10IO_09 {
             writer.write(122);              // z
             // writer.write('가');    // 한글은 2바이트로 표현되는데, 이를 1바이트로 출력하기 때문
             // writer.write("가".getBytes());
-            writer.write("안녕하세요~".getBytes(StandardCharsets.UTF_8));
+
+            writer.write("안녕하세요\n".getBytes(StandardCharsets.UTF_8)); // 안녕하세요
+            // 바이트배열로 변환 한 후 한글은 3byte => 3 * 5 = 15 // 15 + 3 = 18
+            System.out.println("안녕하세요abc".getBytes(StandardCharsets.UTF_8).length); 
+            System.out.println("안녕하세요".length()); // 문자열의 길이 => 5
+            writer.write("안녕하세요 홍길동입니다.\n".getBytes(StandardCharsets.UTF_8), 0, 6); // 안녕
+            writer.write("안녕하세요홍길동입니다.\n".getBytes(StandardCharsets.UTF_8), 15, 9); // 홍길동
+            writer.write("안녕하세요 홍길동입니다.\n".getBytes(StandardCharsets.UTF_8), 16, 9); // 홍길동
 
             // 한글 또는 문자열은 어떻게 파일에 쓰지?
             // 해결 방법
