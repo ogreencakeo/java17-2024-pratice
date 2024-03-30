@@ -1,0 +1,12 @@
+[ 파일 관련 작업시 초보자가 필수로 알아야 하는 메서드 ]
+- file.exist()
+- file.createNewFile()
+- file.isFile()
+- file.isDirectory()
+- file.getName()
+        equals(), equalsIgnoreCase()
+
+[ isFile() 메서드는 도대체 뭐지 ? ]
+파일인지 아닌지? ~.txt, jpg, test
+- 일단 파일의 기준은 여러가지가 있을 수 있고 해당 클래스에서 정의한 기준에 따라서 true, false 값이 반환
+
