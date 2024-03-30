@@ -37,6 +37,13 @@ public class Se11IO_03 {
             FileOutputStream writer = new FileOutputStream(file2);
         ) {
             // [1] FileInputStream + FileOutputStream 조합 => 느리다.
+            // 약 6~7초 소요 (시스템에 따라서 다를 수 있음)
+            int data;
+            while((data = reader.read()) != -1){
+                // System.out.println(data); // 숫자
+                writer.write(data);
+            }
+            writer.flush();
         } catch (Exception e) {
             System.out.println("File Copy Error...!");
             System.out.println(e);
