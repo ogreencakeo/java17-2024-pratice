@@ -1,6 +1,8 @@
 package Section11;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 
 public class Se11IO_03 {
     public static void main(String[] args) {
@@ -28,5 +30,16 @@ public class Se11IO_03 {
         // 원본 파일과 타겟 파일의 객체 생성
         File file1 = new File("lorem.txt"); // 원본파일
         File file2 = new File("C:\\Java17\\java17-2024-pratice\\Section11\\lorem_copy.txt"); // 타겟파일
+    
+        // 파일 복사
+        try (
+            FileInputStream reader = new FileInputStream(file1);
+            FileOutputStream writer = new FileOutputStream(file2);
+        ) {
+            // [1] FileInputStream + FileOutputStream 조합 => 느리다.
+        } catch (Exception e) {
+            System.out.println("File Copy Error...!");
+            System.out.println(e);
+        }
     }
 }
