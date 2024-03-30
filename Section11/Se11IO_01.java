@@ -19,7 +19,11 @@ public class Se11IO_01 {
         // 개선된 try catch문을 사용하면 try 블록을 벗어나는 순간 자동으로 close 호출이 되어지면서 종료
         try (FileOutputStream writer = new FileOutputStream(file)){
             // [1] 26개 알파벳 대문자 파일에 쓰기
-            
+            // 유니코드의 0 ~ 127까지는 아스키(ASCII) 코드와 호환 : 즉, 유니코드 체계에서도 아스키 코드는 유효
+            for(int i=65; i<65+26; i++){
+                writer.write(i);
+            }
+            writer.flush();
             // [2] 26개 알파벳 대문자 파일로부터 읽어오기 ~> 읽어와서 콘솔에 출력
         } catch (Exception e) {
             System.out.println("File Output Error...!");
