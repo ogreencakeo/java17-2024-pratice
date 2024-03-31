@@ -41,6 +41,8 @@ public class Se11IO_05 {
 
             while((data = reader.read(buff)) > 0){
                 // System.out.println(data); // 3 3 2
+                // 마지막 문자가 1개 남았으면 1을 출력, 2개 남았으면 2를 출력
+                // 이유는 read() 메서드의 매개값이 배열인 경우 ~> 읽어온 바이트 수 만큼을 반환하기 때문
                 writer.write(buff, 0, data);
             }
 
