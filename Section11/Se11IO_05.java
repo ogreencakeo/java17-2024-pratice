@@ -40,6 +40,7 @@ public class Se11IO_05 {
             // writer.write(buff, 0, data); // abc 3바이트만 파일에 출력 (쓰기)
 
             while((data = reader.read(buff)) > 0){
+                // System.out.println(data); // 3 3 2
                 writer.write(buff, 0, data);
             }
 
