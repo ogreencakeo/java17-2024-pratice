@@ -48,9 +48,9 @@ public class Se11IO_04 {
             int data1, data2;
             data1 = reader.read(); 
             data2 = reader.read(buff);
-            System.out.println(data1); // 콘솔 (97)
-            System.out.println(data2); // 콘솔 (5)
-            // writer.write(data); // 텍스트 ()
+            System.out.println(data1); // 콘솔 (97) 유니코드
+            System.out.println(data2); // 콘솔 (5) 바이트 // bcABC 
+            // writer.write(data2); // 텍스트 ()
 
             writer.flush();
         } catch (Exception e) {
