@@ -30,14 +30,18 @@ public class Se11IO_07 {
             // 반복문 사용해서 전부 읽어와서 콘솔에 출력하기
             long start = System.currentTimeMillis();
             String line;
+            int cnt = 0;
             while((line = reader.readLine()) != null){
                 System.out.println(line); // 콘솔 출력 읽어오기
                 writer.write(line + "\n");
+                cnt++;
+                // if(cnt > 4) break; // 5줄 가져옴
             }
+            System.out.println(cnt); // 9
 
+            writer.flush();
             long end = System.currentTimeMillis();
             System.out.println("읽어온 시간 => " + (end-start)); // 15
-            
         } catch (Exception e) {
             System.out.println("File Copy Error");
             System.out.println(e);
