@@ -23,5 +23,7 @@ public class Se11IO_08 {
 
         // ★ 사용
         // - 열거형이름(타입) 변수 = 열거형이름.상수;
+        //          String day = "SUN";
+        //          Days day = Days.SUN;
     }
 }
