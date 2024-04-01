@@ -70,5 +70,87 @@ public class Se11String_01 {
 
         System.out.println(sub1);
         System.out.println(sub2);
+
+        // [5] 
+        // 위에서 잘라내기한 sub1, sub2 알파벳 문자열을 다시 합치려면 ? => concat()
+        // 메서드 사용하는 방식, 더하기 연산자 사용하는 방식
+        System.out.println("------------------------ concat()");
+        // String concat = sub1.concat(sub2);
+        String concat = sub1 + sub2;
+        System.out.println(concat);
+        System.out.println(concat.length()); // 26
+
+        // [6]
+        // 위에서 잘라내기 한 sub1, sub2 알파벳 문자열을 다시 합치려면 ? => StringBuilder 클래스
+        System.out.println("------------------------ StringBuilder()");
+        StringBuilder sb = new StringBuilder();
+        sb.append(sub1); // ABCDEFGH
+        sb.append(sub2); // IJKLMNOPQRSTUVWXYZ
+        String str6 = sb.toString();
+        System.out.println(str6);
+        System.out.println(str6.length()); // 26
+
+        // String vs StringBuilder 사용
+        // - 문자열을 합칠 때 매번 새로운 문자열을 반환하는 String보다 StringBuilder 클래스를 사용하는 것을 권장
+        // - 보통 문자열을 합치거나, 더하거나, 연결하거나, 변경하는 경우가 많다면 StringBuilder 사용
+        // - 이외는 반대로 변경하는 경우가 거의 없다면 String 사용
+        
+        // [7] charAt()
+        // 인덱스 값을 받아서 해당하는 문자를 리턴
+        System.out.println("------------------------ charAt()");
+        String tilte = "대한민국 만만세";
+        char charValue = tilte.charAt(3);
+        System.out.println(charValue); // 국
+
+        // [8] indexOf()
+        // 전달된 문자열이 어디에서 부터 시작되는지 그 시작 인덱스를 리턴
+        System.out.println("------------------------ indexOf()");
+        String idxOf = "자바 컴퓨터 프로그래밍";
+        int idx = idxOf.indexOf("컴퓨터"); // 3
+        System.out.println(idx);
+
+        // [9] valueOf()
+        // 기본 타입의 값을 문자열로 반환
+        // String 클래스 => 매개변수 타입으로 valueOf() 메서드가 오버라이딩
+        // static String valueOf(int i) => 주어진 정수 값을 문자열로 변환하여 반환
+        // static String valueOf(double b)
+        // static String valueOf(float f)
+        // static String valueOf(long l)
+        // static String valueOf(char c)
+        // static String valueOf(boolean b)
+        // valueOf() 메서드는 Integer.toString() 메서드와 동일한 기능을 수행
+        System.out.println("------------------------ valueOf()");
+        // 10을 문자열로 변환
+        String s1 = String.valueOf(10);
+        String s2 = Integer.toString(10);
+
+        // 두 문자열이 같은지 비교
+        if(s1.equals(s2)) System.out.println("두 문자열이 같습니다.");
+        else System.out.println("두 문자열은 다릅니다.");
+
+        // boolean 값을 문자열로 변환
+        String s3 = String.valueOf(true);
+        System.out.println(s3); // true
+
+        // char 배열을 문자열로 변환
+        char chars[] = {'A', 'B', 'C'};
+        String s4 = String.valueOf(chars);
+        System.out.println(s4); // ABC
+
+        // [10] join()
+        // 주어진 문자열로 연결 ~> 이때, 구분자(Delimiter)를 넣어서 구분
+        System.out.println("------------------------ join()");
+        String names[] = {"Superman", "Batman", "Antman"};
+        String strNames = String.join(", ", names);
+        System.out.println(strNames); // Superman, Batman, Antman
+
+        // [11] split()
+        // 분열, 분할, 몫 ~> 주어진 구분자로 문자열을 분활 ~> 배열로 반환
+        System.out.println("------------------------ split()");
+        String strTest = "Tiger, Lion, Alligator, Elephant, Rabbit";
+        String splitArr[] = strTest.split(", ");
+        for(String s : splitArr){
+            System.out.println(s);
+        }
     }
 }
