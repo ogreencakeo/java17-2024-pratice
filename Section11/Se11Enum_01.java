@@ -23,7 +23,7 @@ package Section11;
 //          String day = "SUN";
 //          Days day = Days.SUN;
 
-public class Se11IO_08 {
+public class Se11Enum_01 {
     // 기존 방식 : 열거형을 사용하지 않는 방식
     public static final String SUN = "일요일(Sunday)";
     public static final String Sat = "토요일(Saturday)";
@@ -31,7 +31,7 @@ public class Se11IO_08 {
     public static void main(String[] args) {
         // [1] 기존 방식
         String sDay;
-        sDay = Se11IO_08.SUN;
+        sDay = Se11Enum_01.SUN;
         System.out.println(sDay); //일요일(Sunday)
         
         sDay = "안녕하세요";
