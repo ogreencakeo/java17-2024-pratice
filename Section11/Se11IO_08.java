@@ -45,17 +45,23 @@ public class Se11IO_08 {
         // eDay = "안녕하세요"; // error => 컴파일 단계에서 오류를 감지
     
         // [3] "토요일(Saturday)" 이렇게 한글로 출력하려면?
-        System.out.println("--------한글로 출력 ---------");
-        System.out.println(EnumDay.SUN.hangul);
+        // System.out.println("--------한글로 출력 ---------");
+        // System.out.println(EnumDay.SUN.hangul); // 일요일(Sunday)
+        // System.out.println(EnumDay.SAT.hangul); // 토요일(Saturday)
+
+        // [4] private 사용시 Getter 메서드 사용
+        // private 타입인 경우 위 3번처럼 사용이 안되므로 Getter 메서드를 만들어서 사용
+        System.out.println("-------- Getter 메서드 사용 ---------");
+        System.out.println(EnumDay.SAT.getHangual()); // 토요일(Saturday)
     }
 }
 
 enum EnumDay{
-    SUN("일요일 (Sunday)"), 
-    SAT("토요일 (Saturday)");
+    SUN("일요일(Sunday)"), SAT("토요일(Saturday)");
 
     // Field
-    public String hangul;
+    // public String hangul;
+    private String hangul;
 
     // Constructor
     EnumDay(String str){
@@ -63,4 +69,7 @@ enum EnumDay{
     }
 
     // Method
+    public String getHangual(){
+        return this.hangul;
+    }
 }
