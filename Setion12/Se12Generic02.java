@@ -8,7 +8,11 @@ public class Se12Generic02 {
 
         Data1 d1 = new Data1(foo);
         // Data1 d1 = new Data1("대한민국");
-        
+        // 문자열을 Integer에 넣고 있는데 오류가 안나고 있음 ~> 오류가 안보이는게 문제~!
+        // 지금 (컴파일 단계) 당장은 문제가 없어 보이지만, 프로그램을 실행할 때(런타임 단계) 에러가 발생...!
+        // 심지어 변수를 만들어 사용하지도 않으면 런타임 단계에서도 에러가 없음...
+        System.out.println(d1.getObj()); // 100
+
         // getObj() 메서드는 Object 타입을 반환합니다. 
         // 따라서 이 메서드를 호출한 결과를 Integer 타입의 변수에 직접 대입할 수 없습니다.
         Integer a = (Integer) d1.getObj();
