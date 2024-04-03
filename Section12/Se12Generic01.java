@@ -1,4 +1,4 @@
-package Setion12;
+package Section12;
 // 자바의 컬렉션 프레임워크(Collection Framework)나 제네릭(Generic) 등에서는 객체만 다루기 때문에 
 // 기본 타입을 객체로 변환해야 할 때가 있습니다.
 public class Se12Generic01 {

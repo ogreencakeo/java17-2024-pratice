@@ -1,4 +1,4 @@
-package Setion12;
+package Section12;
 
 import java.util.ArrayList;
 // 배열은 제네릭을 지원하지 않습니다. 

@@ -1,4 +1,4 @@
-package Setion12;
+package Section12;
 
 public class Se12Generic02 {
     public static void main(String[] args) {
