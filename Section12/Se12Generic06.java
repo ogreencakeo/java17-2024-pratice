@@ -20,6 +20,28 @@ public class Se12Generic06 {
         //      4. Dog 클래스를 만들고, Birds 클래스는 상속 받지 않는다.
         //      5. AnimalList 클래스를 제네릭으로 만들고, Eagle, Owl 객체를 ArrayList에 저장한다.
         
+        // Birds 타입에 대해서만 저장하도록 선언
+        AnimalList<Birds> animals1 = new AnimalList<>();
+
+        // 추가하기
+        animals1.setter(new Eagle());
+        animals1.setter(new Owl());
+        animals1.setter(new Eagle());
+        animals1.setter(new Owl());
+        // animals1.setter(new Dog()); // error // Birds 타입이 아닌 경우 오류 발생
+
+        // 가져오기
+        // for(AnimalList a : animals1){
+        //     System.out.println(a);
+        // }
+        // 반복문으로 저장된 객체 모두 출력
+        for(int i=0; i<animals1.getSize(); i++){
+            System.out.print(animals1.getter(i) + " => ");
+            animals1.getter(i).cry();;
+        }
+
+        // 사이즈 출력
+        System.out.println("현재 배열리스트에 저장된 객체 수 : " + animals1.getSize());
     }
 }
 
@@ -31,7 +53,6 @@ class Dog{ void cry(){ System.out.println("멍멍~");} }
 class AnimalList<T>{
     // ArrayList 선언
     ArrayList<T> alist = new ArrayList<>();
-
     // Setter
     void setter(T obj){
         alist.add(obj);
