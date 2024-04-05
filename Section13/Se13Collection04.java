@@ -33,8 +33,6 @@ public class Se13Collection04 {
         origin.retainAll(target); // 적용
         System.out.println(origin); // [Antman, Antman] => 대소문자 구분, 중복 값이 여러개면 모두 유지
         
-        // [2]
-
 
     }
 }
