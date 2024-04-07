@@ -3,6 +3,7 @@ package Section13;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class Se13Collection09 {
     public static void main(String[] args) {
@@ -53,6 +54,23 @@ public class Se13Collection09 {
     }
 
     public static void exam03(){
+        // 4 5 6 10 9
+        String fruits[] = {"pear", "apple", "orange", "fineapple", "strawberry"};
+
+        // 비교자(Comparator)를 만들어서 문자열 길이로 정렬하기
+        // 방법 1 : Comparaotr<T> 인터페이스를 implements 해서 int 타입으로 반환하는 compare(T O1, T o2) 추상 메서드를 구현
+        class ComparatorLength implements Comparator<String>{
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.length() - o2.length(); // 오름차순
+            }
+        }
+
+        // 객체 생성
+        Comparator<String> cl = new ComparatorLength();
+        Arrays.sort(fruits, cl); // 적용
         
+        // 출력
+        for(String str : fruits) System.out.println(str);
     }
 }
