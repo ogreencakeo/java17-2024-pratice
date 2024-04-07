@@ -78,6 +78,11 @@ class EPerson implements Comparable<EPerson>{
         //정렬 기준 : 나이
         return this.age - other.age; // 오름차순
         // return other.age - this.age; // 내림차순
+
+        // 내림차순을 만드는 여러가지 방법
+        // 1. 빼는 순서 바꾸기
+        // 2. Collections.reverseOrder() 적용하기
+        // 3. -1 곱하기 : return (this.age - other.age) * (-1)
     }
     // 구현은 어떻게...
     // - Collections.sort() 메서드는 정렬할 컬렉션의 요소들이 Comparable 인터페이스를 구현하고 있는지 확인
