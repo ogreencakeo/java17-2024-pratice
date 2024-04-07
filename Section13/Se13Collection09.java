@@ -59,17 +59,27 @@ public class Se13Collection09 {
 
         // 비교자(Comparator)를 만들어서 문자열 길이로 정렬하기
         // 방법 1 : Comparaotr<T> 인터페이스를 implements 해서 int 타입으로 반환하는 compare(T O1, T o2) 추상 메서드를 구현
-        class ComparatorLength implements Comparator<String>{
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.length() - o2.length(); // 오름차순
-            }
-        }
+        /////////////////////////////////////////////////////////////////////
+        // class ComparatorLength implements Comparator<String>{
+        //     @Override
+        //     public int compare(String o1, String o2) {
+        //         return o1.length() - o2.length(); // 오름차순
+        //     }
+        // }
 
-        // 객체 생성
-        Comparator<String> cl = new ComparatorLength();
-        Arrays.sort(fruits, cl); // 적용
-        
+        // // 객체 생성
+        // Comparator<String> cl = new ComparatorLength();
+        // Arrays.sort(fruits, cl); // 적용
+
+        // 방법 2 : 람다식 사용해서 간결하게 한 줄로 작성
+        ////////////////////////////////////////////////////////////////////
+        // - 함수의 선언과 구현을 한 줄로 간결하게 표현한 식 -> 함수(메서드)
+        // - 형식 : (매개변수) => 결과값
+        // - 람다식은 간결하고 가독성 및 편리성이 뛰어나기 때문에, 함수 대신 람다식을 사용한 경우가 많다.
+        Comparator<String> cl = ( o1,  o2) -> o1.length() - o2.length();
+        // Arrays.sort(fruits, cl); // 오름차순 적용
+        Arrays.sort(fruits, Collections.reverseOrder(cl)); // 내림차순 적용
+
         // 출력
         for(String str : fruits) System.out.println(str);
     }
