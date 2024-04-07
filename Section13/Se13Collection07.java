@@ -45,6 +45,9 @@ class EPersonSec07 implements Comparable<EPersonSec07> {
         char c1 = this.name.charAt(0);
         System.out.println((int)c1); // Superman Batman 중 Batman : 66
         
+        // 66 - 65 : 1 (int값 반환)
+        System.out.println(this.name.compareTo(other.name)); // 1이 출력
+
         // 같은 문자열끼리 빼기를 하면 0이 나온다.
         // System.out.println(this.name.compareTo(other.name)); 
         
