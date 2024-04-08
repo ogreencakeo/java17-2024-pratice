@@ -1,7 +1,5 @@
 package Section13;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
@@ -18,7 +16,7 @@ public class Se13Collection010 {
         testStack();
         System.out.println("---------------------------스텍");
 
-        // testQueue();
+        testQueue();
         System.out.println("---------------------------큐");
     }
 
@@ -110,5 +108,37 @@ public class Se13Collection010 {
         // 스택 비우기
         stack.clear();
         System.out.println("스택 비었나요 ? : " + stack.empty()); // true
+    }
+
+    public static void testQueue(){
+        // 큐 객체 생성
+        LinkedList<String> queue = new LinkedList<>();
+
+        // 큐에 요소 추가
+        queue.add("홍길동");
+        queue.add("이순신");
+        queue.add("강감찬");
+
+        // 큐에 있는 요소 반환 : 스택과 헷갈리지 말기
+        System.out.println(queue.peek()); // 홍길동
+        System.out.println(queue); // [홍길동, 이순신, 강감찬]
+        
+        // 큐에 있는 요소 반환 + 삭제
+        System.out.println(queue.poll()); // 홍길동
+        System.out.println(queue); // [이순신, 강감찬]
+        
+        // 값으로 요소 삭제
+        queue.remove("이순신");
+        System.out.println(queue); // [강감찬]
+        
+        // 큐에 있는 요소 수 구하기
+        System.out.println("현재 큐의 요소 수는 ? : " + queue.size()); // 1
+        
+        // 큐 비었는지 체크
+        System.out.println("큐 비었나요 ? : " + queue.isEmpty()); // false
+        
+        // 큐 비우기
+        queue.clear();
+        System.out.println("큐 비었나요 ? : " + queue.isEmpty()); // true
     }
 }
