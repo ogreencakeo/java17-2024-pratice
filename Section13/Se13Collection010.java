@@ -1,7 +1,10 @@
 package Section13;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 public class Se13Collection010 {
     public static void main(String[] args) {
@@ -47,24 +50,65 @@ public class Se13Collection010 {
     }
 
     public static void testStack(){
-        // 스택
-        // - Stack 클래스는 Vector 클래스를 상속받아 만들어진 것
-        // - 후입선출 방식의 LIFO 방식으로 데이터 처리가 이루어지는 자료구조 형태
-        // LIFO : Last In, First Out
-        // 쉽게 말해, 가장 나중에 저장됨(push) 데이터가 가장 먼저 나오게(pop) 되는 자료구조
+        // 스택 객체 생성
+        // Deque<Integer> stack = new ArrayDeque<>();
+        Stack<Integer> stack = new Stack<>();
 
-        // 스택 예
-        // - Undo(언두) 기능           a   b   c   d
-        // - 브라우저 뒤로가기, 역순으로 글자 출력하기 등등 ... 
+        // 스택에 요소 추가
+        stack.push(7);
+        stack.push(9);
+        stack.push(5);
+        stack.push(3);
+        stack.push(6);
 
-        // 주요 메서드
-        // - 각 메서드는 이름만 봐도 대충은 알 수 있으나 정확히 아는 것이 중요!
-        // push()       스택의 맨 위에 요소 추가
-        // pop()        스택의 맨 위에 있는(맨 마지막에 저장된) 요소를 반환하고, 해당 요소를 스택에 삭제
-        // peek()       스택의 맨 위에 있는(맨 마지막에 저장된) 요소를 반환
-        // empty()      스택이 비어있는지 체크하여 비었으면 true, 아니면 false 반환
-        // search()     위치 반환 (주의! 맨 위에 위치해 있는 요소가 1부터 시작함)
-        // size()       
-        // clear()
+        // 스택에서 요소 반환
+        System.out.println(stack.peek()); // 6
+        System.out.println(stack); // [7, 9, 5, 3, 6]    
+        
+        // 스택에서 요소 반환 + 삭제
+        System.out.println(stack.pop()); // 6
+        System.out.println(stack); // [7, 9, 5, 3]
+
+        // 요소 검색 : serach
+        // 만약 스택에 없는 값을 검색하면 ? : -1 출력
+        System.out.println(stack.search(3)); // 1
+        System.out.println(stack.search(7)); // 4
+        System.out.println(stack.search(9)); // 3
+        System.out.println(stack.search(0)); // -1
+
+        // 인덱스로 값 가져오기 : get() 메서드 사용
+        System.out.println("0번째 인덱스에 있는 값 : " + stack.get(0)); // 7
+        System.out.println("0번째 인덱스에 있는 값 : " + stack.get(stack.size() - 1)); // 3
+
+
+        // 스택에 있는 요소 수 구하기
+        System.out.println("현재 요소 수 : " + stack.size()); // 4
+
+        // 스택이 비었는지 체크
+        System.out.println("스택이 비었나요 ? : " + stack.empty()); // false
+
+        // 스택 요소 전체 출력
+        // 7 9 5 3
+        for(int i=0; i<stack.size(); i++){
+            if(i == stack.size()-1)  System.out.println(stack.get(i));
+            else  System.out.print(stack.get(i) + ", ");
+        }
+        // 향상된 for문
+        // for(int i : stack){
+        //     System.out.println(i);
+        // }
+
+        stack.pop();
+
+        // 스택에 쌓인 순서대로 출력 (거꾸로 출력)
+        // 5 9 7
+        for(int i=stack.size()-1; i>=0; i--){
+            if(i==0) System.out.println(stack.get(i));
+            else System.out.print(stack.get(i) + ", "); 
+        }
+
+        // 스택 비우기
+        stack.clear();
+        System.out.println("스택 비었나요 ? : " + stack.empty()); // true
     }
 }
