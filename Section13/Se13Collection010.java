@@ -140,5 +140,37 @@ public class Se13Collection010 {
         // 큐 비우기
         queue.clear();
         System.out.println("큐 비었나요 ? : " + queue.isEmpty()); // true
+        
+        // 추가
+        queue.add("광개토 대왕");
+        queue.add("장수왕");
+        queue.add("세종대왕");
+
+        System.out.println();
+        // 전체 출력
+        for(String s : queue){
+            System.out.println(s);
+        }
+
+        // 맨 앞에 있는 요소 반환 : element()
+        System.out.println("맨 앞에 있는 요소는 ? : " + queue.element()); // 광개토 대왕
+
+        // 정조 세종대왕 장수왕 광개토 대왕
+        // offer 메서드
+        queue.offer("정조");
+        System.out.println(queue); // [광개토 대왕, 장수왕, 세종대왕, 정조]
+        System.out.println("peek() 사용 : " + queue.peek()); // 광개토 대왕
+        System.out.println("element() 사용 : " + queue.element()); // 광개토 대왕
+        System.out.println(queue.get(queue.size()-1)); // 정조
+        
+        
+        // offerFirst 메서드
+        queue.offerFirst("영조"); 
+        System.out.println(queue); // [영조, 광개토 대왕, 장수왕, 세종대왕, 정조]
+        System.out.println(queue.element()); // 영조
+
+        // 인덱스 2번에 삽입하기
+        queue.add(2, "이성계");
+        System.out.println(queue); // [영조, 광개토 대왕, 이성계, 장수왕, 세종대왕, 정조]
     }
 }
