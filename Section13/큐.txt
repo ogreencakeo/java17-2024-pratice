@@ -14,5 +14,5 @@
 - poll()        스택의 pop() 메서드에 해당, 큐가 비었으면 null 반환
 - peek()        
 - remove()
-- element()
-- offer()
+- element()     큐 맨 앞에 있는 (가장 먼저 저장된) 요소를 반환
+- offer()       큐 맨 뒤쪽에 요소를 삽입
