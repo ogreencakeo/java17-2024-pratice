@@ -1,0 +1,15 @@
+[ HashSet ]
+
+[ Set 인터페이스를 구현한 대표적인 클래스들 ]
+- HashSet
+- TreeSet
+
+[ Set 특징 ]
+- 요소를 순서에 상관없이 저장
+- 중복 값은 허용 X
+- Set 인터페이스는 Collection 인터페이스를 상속받으므로, Collection에서 정의한 메서드 대부분을 사용
+
+[ 주요 메서드 ]
+- add()
+- remove()
+- contains()
