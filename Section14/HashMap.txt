@@ -1,0 +1,23 @@
+[ HashMap ]
+
+[ Map 인터페이스를 구현한 대표적인 클래스들 ]
+- HashMap
+- TreeMap
+
+[ Map 특징 ]
+- 한 개의 요소를 <key, value> 쌍으로 묶어서 관리하는 자료구조 형태
+- 키(Key)는 중복할 수 없고 유일해야 하며, 값(Value)은 중복 가능
+- 객체 생성할 때 제네릭 타입을 지정하는 부분에서 key, value 쌍에 대한 타입을 지정
+
+[ 예 ]
+- [아이디 : 암호]
+- [학생번호 : 학생아이디]
+
+[ 주요 메서드 ]
+- put(K key, Value)         <key, value> 쌍을 hashMap에 추가
+- get(Object key)           key에 해당하는 값을 반환
+- remove(Object key)        key에 해당하는 데이터를 삭제
+- clear()
+- size()
+- keySet()                  key들의 집합을 반환 => key만 추출
+- entrySet()                모든 엔트리를 반환
