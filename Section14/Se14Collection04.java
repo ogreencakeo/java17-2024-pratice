@@ -62,6 +62,13 @@ public class Se14Collection04 {
 
         // [2] : forEach() + 람다식
         set.forEach(ele -> System.out.println(ele));
+
+        System.out.println("------------------------------");
+
+        // 이름의 길이가 8인 요소 찾기
+        set.forEach(ele -> {
+            if(ele.name.length() == 8) System.out.println("객체 아이디 길이가 8인 것은 ? : " + ele);
+        });
     }
 }
 
