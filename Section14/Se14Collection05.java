@@ -13,7 +13,8 @@ public class Se14Collection05 {
         
         // Person 객체 hashCode 값 출력
         Person05 p1 = new Person05("홍길동", 20);
-        Person05 p2 = new Person05("홍길동", 20);
+        Person05 p2 = new Person05("홍길동", 30);
+
         System.out.println("p1 해시코드 값 : " + p1.hashCode());
         System.out.println("p2 해시코드 값 : " + p2.hashCode());
 
@@ -39,17 +40,21 @@ class Person05{
     }
 
     @Override
+    public String toString(){
+        return String.format("Person : {name : %s, age : %d}",
+            this.name, this.age);
+    }
+
+    @Override
     public int hashCode(){
-        return this.name.hashCode();
+        return this.name.hashCode() + this.age;
     }
 
     @Override
     public boolean equals(Object obj){
         if(obj instanceof Person05){
             Person05 p = (Person05) obj;
-            return this.name.equals(p.name);
-        }else{
-            return false;
-        }
+            return this.name.equals(p.name) && (this.age == p.age);
+        }else{ return false; }
     }
 }
