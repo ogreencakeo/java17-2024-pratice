@@ -24,7 +24,7 @@ public class Se14Collection05 {
         
         // Person 객체 hashCode 값 출력
         Person05 p1 = new Person05("홍길동", 20);
-        Person05 p2 = new Person05("홍길동", 20);
+        Person05 p2 = new Person05("홍길동", 30);
 
         System.out.println("p1 해시코드 값 : " + p1.hashCode());
         System.out.println("p2 해시코드 값 : " + p2.hashCode());
@@ -55,6 +55,8 @@ public class Se14Collection05 {
         // 객체 추가하기
         set.add(new Person05("Batman", 28));
         set.add(new Person05("Batman", 38));
+        set.add(p1);
+        set.add(p2);
 
         for(Person05 p : set){
             System.out.println(p);
