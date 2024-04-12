@@ -1,12 +1,20 @@
 package Section14;
 
 import java.util.HashSet;
+import java.util.Objects;
 
 public class Se14Collection05 {
     public static void main(String[] args) {
         // hashCode와 equals 메서드 재정의
         // 1. 두 객체의 해시코드 값 같게 만들기
         // 2. 2개 필드를 가지고 만들기
+        // 3. Object 클래스 : hash() 메서드 사용해서 해시코드 생성하기
+        //      - Object 클래스의 hash() 메서드는 임의의 개수를 매개값으로 받아 해시코드를 계산하여 반환해주는 정적 메서드
+        //      - 이 메서드는 객체의 주소 값을 이용해서 해싱(hashing) 기법을 통해 해시 코드를 만든 후 반환
+        //      - 직접 이러한 것을 구현하고 만들려면 복잡하기 때문에 제공하는 Objects.hash() 메서드를 사용하는 것을 권장
+        //      - 해시코드 값은 기본적으로 객체의 주소 값을 이용해서 해시 코드를 생성
+        //          (그러나, 객체의 필드를 이용해서 해시 코드를 생성할 수도 있음)
+        //      - 이때는 hashCode() 메서드를 오버라이딩하여 객체의 필드를 Objects.hash() 인자로 넣어서 구현
 
         // 해시코드 : 객체의 내용을 베이스로 만들어진 객체 구분(인식)용 정수 값 ~> 식별자
         // - hashCode() 메서드 변환 타입 : int 타입을 반환
@@ -16,7 +24,7 @@ public class Se14Collection05 {
         
         // Person 객체 hashCode 값 출력
         Person05 p1 = new Person05("홍길동", 20);
-        Person05 p2 = new Person05("홍길동", 30);
+        Person05 p2 = new Person05("홍길동", 20);
 
         System.out.println("p1 해시코드 값 : " + p1.hashCode());
         System.out.println("p2 해시코드 값 : " + p2.hashCode());
@@ -72,14 +80,23 @@ class Person05{
 
     @Override
     public int hashCode(){
-        return this.name.hashCode() + this.age;
+        // [1] 방식 : String의 hashCode() 메서드 사용
+        // return this.name.hashCode() + this.age;
+
+        // [2] 방식 : Objects.hash() 메서드 사용
+        return Objects.hash(name, age);
     }
 
     @Override
     public boolean equals(Object obj){
-        if(obj instanceof Person05){
-            Person05 p = (Person05) obj;
-            return this.name.equals(p.name) && (this.age == p.age);
-        }else{ return false; }
+        // [1]
+        // if(obj instanceof Person05){
+        //     Person05 p = (Person05) obj;
+        //     return this.name.equals(p.name) && (this.age == p.age);
+        // }else{ return false; }
+
+        // [2] 삼항연산자 작성 
+        return (obj instanceof Person05) ? 
+            this.name.equals(((Person05)obj).name) && this.age == ((Person05)obj).age : false;
     }
 }
