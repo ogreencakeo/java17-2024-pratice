@@ -17,11 +17,15 @@ public class Se14Collection05 {
         System.out.println("p1 해시코드 값 : " + p1.hashCode());
         System.out.println("p2 해시코드 값 : " + p2.hashCode());
 
+        // p1, p2 객체의 해시코드 값을 같게 만드는 방법은 ? -> Person05 클래스에 hashCode() 메서드 재정의 (오버라이딩) 
+        // hashCode() 메서드 재정의 + equals() 메서드 재정의 : 이 두개의 메서드 재정의가 필요!
+
         // 다시 말해서, 컬랙션 프레임워크 클래스가 내부적으로 중복값 비교를 할 때 hashCode, equals 결과 값을 중요하게 참조!
         // 특히, 중복값을 허용하지 않는 클래스 사용 시 기억
         // 만약 컬랙션에서 사용하지 않고, 단지 equals 메서드만 재정의해서 사용하면 해시 코드가 틀려도 true가 출력
         System.out.println("p1 vs p2 해스코드 값이 같냐? : " + (p1.hashCode() == p2.hashCode()) );
         System.out.println("p1.equals(p2) 결과는 ? : " + p1.equals(p2));
+        
     }
 }
 
