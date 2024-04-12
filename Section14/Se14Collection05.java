@@ -1,4 +1,7 @@
 package Section14;
+
+import java.util.HashSet;
+
 public class Se14Collection05 {
     public static void main(String[] args) {
         // hashCode와 equals 메서드 재정의
@@ -26,6 +29,28 @@ public class Se14Collection05 {
         // 만약 컬랙션에서 사용하지 않고, 단지 equals 메서드만 재정의해서 사용하면 해시 코드가 틀려도 true가 출력
         System.out.println("p1 vs p2 해스코드 값이 같냐? : " + (p1.hashCode() == p2.hashCode()) );
         System.out.println("p1.equals(p2) 결과는 ? : " + p1.equals(p2));
+        
+        // HashSet 객체 생성
+        HashSet<Person05> set = new HashSet<>();
+
+        // Person05 객체 생성
+        set.add(new Person05("Superman", 24));
+        set.add(new Person05("Antman", 21));
+        set.add(new Person05("Batman", 28));
+
+        for(Person05 p : set){
+            System.out.println(p);
+        }
+        
+        System.out.println("------------------------------------");
+
+        // 객체 추가하기
+        set.add(new Person05("Batman", 28));
+        set.add(new Person05("Batman", 38));
+
+        for(Person05 p : set){
+            System.out.println(p);
+        }
         
     }
 }
