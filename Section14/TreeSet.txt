@@ -72,7 +72,7 @@ class Person implements Comparable<Person> {
         higher(E e)             지정된 요소보다 큰거에서 가장 작은 요소를 반환
         lower(E e)              지정된 요소보다 작은거에서 가장 큰 요소를 반환
 3. Group
-        subSet()
-        headSet()
-        tailSet()
+        subSet(E from, E to)    지정된 범위의 요소를 반환 (마지막 요소 전까지)
+        headSet(E to)           // headSet(4) : 1, 2, 3
+        tailSet(E from)         // tailSet(4) : 4, 5 ... 10
 ---------------------------------------------------------------------------------------------
