@@ -55,3 +55,13 @@ class Person implements Comparable<Person> {
 - 기본은 오름차순 (Ascending)
 - TreeSet 같은 경우는 <K, V> 쌍으로 되어있는데 Key를 기준으로 오름차순 정렬
 
+[ TreeSet 메서드 ]
+1. Group
+        add(E e)                요소 추가
+        contains(Object o)      요소가 포함되었는지 체크
+        remove(Object o)        요소 제거
+        clear()                 비우기
+        size()                  요소 개수 반환
+        isEmpty()               TreeSet이 비어 있는지 확인
+        first()                 TreeSet 요소중에서 가장 작은 최솟값 반환
+        last()                  TreeSet 요소중에서 가장 큰 최댓값 반환
