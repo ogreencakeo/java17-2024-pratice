@@ -44,5 +44,15 @@ public class Se14Collection06 {
         // System.out.println(ts.remove(100));      // false
         ts.remove(10);
         System.out.print(ts + " ");
+
+        // 여러 메서드 한꺼번에 사용
+        System.out.println("-------------- 여러 메서드 사용");
+        System.out.println(ts.contains(5)); // true
+        System.out.println(ts.remove(5)); // true
+        System.out.println(ts.isEmpty()); // false
+        System.out.println(ts.size()); // 11
+        System.out.println(ts.first()); // 1
+        System.out.println(ts.last()); // 13
+        System.out.println(ts); // [1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13]
     }    
 }
