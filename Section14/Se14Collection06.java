@@ -70,5 +70,11 @@ public class Se14Collection06 {
         System.out.println("ts.ceiling(7) : " + ts.ceiling(7)); // 7
         System.out.println("ts.lower(7) : " + ts.lower(7)); // 6
         System.out.println("ts.higher(7) : " + ts.higher(7)); // 8
+
+        // 현재 상태
+        System.out.println(ts); // [1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13]
+        System.out.println(ts.subSet(6, 10)); // [6, 7, 8, 9]
+        System.out.println(ts.headSet(4)); // [1, 2, 3]
+        System.out.println(ts.tailSet(7)); // [8, 9, 11, 12, 13]
     }    
 }
