@@ -54,5 +54,21 @@ public class Se14Collection06 {
         System.out.println(ts.first()); // 1
         System.out.println(ts.last()); // 13
         System.out.println(ts); // [1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13]
+
+        // floor, ceiling
+        // - floor, ceiling 메서드는 지정한 요소의 값과 같은게 있으면 해당 요소를 출력
+        // - higher, lower 메서드는 일단 지정한 요소의 값보다 크거나 작은거에서 값을 찾아서 출력
+        System.out.println("---------------- floor(), ceiling()");
+        System.out.println("ts.floor(5) : " + ts.floor(5)); // 4
+        System.out.println("ts.ceiling(5) : " + ts.ceiling(5)); // 6
+        System.out.println("ts.lower(5) : " + ts.lower(5)); // 4
+        System.out.println("ts.higher(5) : " + ts.higher(5)); // 6
+
+        System.out.println("-------------------------------");
+        
+        System.out.println("ts.floor(7) : " + ts.floor(7)); // 7
+        System.out.println("ts.ceiling(7) : " + ts.ceiling(7)); // 7
+        System.out.println("ts.lower(7) : " + ts.lower(7)); // 6
+        System.out.println("ts.higher(7) : " + ts.higher(7)); // 8
     }    
 }
