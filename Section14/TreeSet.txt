@@ -71,3 +71,8 @@ class Person implements Comparable<Person> {
         ceiling(E e)            지정된 요소와 동일 or 큰거에서 가장 작은 요소를 반환
         higher(E e)             지정된 요소보다 큰거에서 가장 작은 요소를 반환
         lower(E e)              지정된 요소보다 작은거에서 가장 큰 요소를 반환
+3. Group
+        subSet()
+        headSet()
+        tailSet()
+---------------------------------------------------------------------------------------------
