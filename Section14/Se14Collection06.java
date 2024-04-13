@@ -73,8 +73,42 @@ public class Se14Collection06 {
 
         // 현재 상태
         System.out.println(ts); // [1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13]
-        System.out.println(ts.subSet(6, 10)); // [6, 7, 8, 9]
+        System.out.println(ts.subSet(6, 11)); // [6, 7, 8, 9]
         System.out.println(ts.headSet(4)); // [1, 2, 3]
-        System.out.println(ts.tailSet(7)); // [8, 9, 11, 12, 13]
+        System.out.println(ts.tailSet(7)); // [7, 8, 9, 11, 12, 13]
+        
+        // 매갯값에 따른 다른 결과 출력
+        System.out.println("------------------------------ 다른 결과 출력");
+        // 7, 8, 9, 11]
+        System.out.println(ts.subSet(6, false, 11, true));
+        System.out.println(ts.headSet(4, true)); // [1, 2, 3, 4]
+        System.out.println(ts.tailSet(7, false)); // [8, 9, 11, 12, 13]
+
+        // String 타입에 적용
+        System.out.println("------------ 문자열");
+        TreeSet<String> ts2 = new TreeSet<>();
+
+        // 요소 추가
+        ts2.add("C");
+        ts2.add("B");
+        ts2.add("A");
+        ts2.add("D");
+        ts2.add("E");
+
+        // subSet(), headSet(), tailSet(), first(), last() 
+        System.out.println("전체 출력 : " + ts2);
+
+        System.out.println(ts2.subSet("A", "B")); // [A]
+        System.out.println(ts2.subSet("A", "D")); // [A, B, C]
+        System.out.println(ts2.subSet("A", false, "B", true)); //[B]
+
+        System.out.println(ts2.headSet("C")); // [A, B]
+        System.out.println(ts2.headSet("C", true)); // [A, B, C] 
+
+        System.out.println(ts2.tailSet("C")); // [C, D, E]
+        System.out.println(ts2.tailSet("C", false)); // [D, E]
+
+        System.out.println(ts2.first()); // A
+        System.out.println(ts2.last()); // E
     }    
 }
