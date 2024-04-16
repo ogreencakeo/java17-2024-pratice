@@ -76,4 +76,14 @@ class Person implements Comparable<Person> {
         subSet(E from, E to)    지정된 범위의 요소를 반환 (마지막 요소 전까지)
         headSet(E to)           // headSet(4) : 1, 2, 3
         tailSet(E from)         // tailSet(4) : 4, 5 ... 10
+4. Group
+        pollFirst()            첫 번째 요소 반환 and 그 요소를 TreeSet 컬렉션에서 제거(잘라내기)
+        pollLast()             마지막 요소 반환 and 그 요소를 TreeSet 컬렉션에서 제거 (잘라내기)
+        - poll : 투표, 투표하다(=vote)
+        - (소 등의) 뿔을 자르다; 제거하다; (나무의) 가지를 치다; 제거하다
+        - polled Trees : 가지를 친 나무
+
+        - 이 두 메서드는 지정한 타입을 반환 ~> Integer 또는 String 지정한 타입의 변수로 받아서 사용
+        - TreeSet 컬렉션이 비어있는 경우 사용하면 ~> null 반환
+        - TreeSet 컬렉션은 정렬된 컬렉션이므로 이러한 메서드 사용 가능
 ---------------------------------------------------------------------------------------------
