@@ -110,8 +110,5 @@ public class Se14Collection06 {
 
         System.out.println(ts2.first()); // A
         System.out.println(ts2.last()); // E
-
-        // pollFirst(), pollLast()
-        System.out.println("--------------------------- TreeSet<Integer>");
     }    
 }
