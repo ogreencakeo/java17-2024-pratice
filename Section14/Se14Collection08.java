@@ -1,7 +1,7 @@
 package Section14;
 
-import java.util.Map;
 import java.util.TreeMap;
+import java.util.Map;
 
 public class Se14Collection08 {
     public static void main(String[] args) {
@@ -50,5 +50,30 @@ public class Se14Collection08 {
             System.out.print(key + " : " + map.get(key) + ", ");
         }
 
+        System.out.println("\n----------------------------------------------- [2]");
+        // [2] 포도 가격이 얼마인지 출력하시오.
+        // 값 한 개만 출력하는 문제 : get() 메서드 사용
+        System.out.println("포도 한 송이 가격 : " + map.get("포도"));
+
+        System.out.println("----------------------------------------------- [3]");
+        // [3] 과일 중 가격이 가장 싼 과일은 ?
+        // firstKey(), firstEntry() -> 이거는 키를 기준으로 최솟값을 가져오는 것
+        System.out.println("가장 싼 과일(가장 작은 키는)? : " + map.firstKey()); // 사과
+        System.out.println("가장 작은 요소는 ? : " + map.firstEntry()); // 사과=30000
+        System.out.println("가장 비싼 과일은(가장 큰 키는) ? : " + map.lastKey()); // 포도
+        System.out.println("가장 큰 요소는 ? : " + map.lastEntry()); // 포도=20000
+
+        System.out.println("----------------------------------------------- [4]");
+        // [4] 과일중에서 포도의 가격을 22000원으로 변경하고 싶다면?
+        // 첫 번째 방법
+        // map.put("포도", 22000);
+        // System.out.println(map);
+
+        // 두 번째 방법
+        Integer price = map.get("포도");
+        System.out.println("수정전 포도 가격 : " + price);
+        price = 22000;
+        map.put("포도", price);
+        System.out.println(map);
     }
 }
