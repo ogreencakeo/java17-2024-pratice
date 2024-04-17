@@ -121,5 +121,9 @@ public class Se14Collection08 {
         int priceB = map.higherEntry("참외").getValue();
         System.out.println(priceA); // 40000
         System.out.println(priceB); // 50000
+
+        System.out.println("----------------------------------------------- [7]");
+        // [7] 가격이 가장 비싼 과일의 이름을 알고 싶다면?
+        
     }
 }
