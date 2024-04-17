@@ -1,7 +1,9 @@
 package Section14;
 
-import java.util.TreeMap;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.Map.Entry;
 
 public class Se14Collection08 {
     public static void main(String[] args) {
@@ -75,5 +77,34 @@ public class Se14Collection08 {
         price = 22000;
         map.put("포도", price);
         System.out.println(map);
+
+        System.out.println("----------------------------------------------- [5]");
+        // [5] 메서드 반환 값 받기
+        // (문제1) 트리맵에서 첫 번째 요소를 출력하려면? ~> firstEntry()
+        // (문제2) 트리맵에서 마지막 번째 요소를 출력하려면? ~> lastEntry
+        // (문제3) 트리맵 전체 요소들을 반복문 사용해서 출려하려면 ~> entrySet()
+        // (문제4) 트리맵 키들만 출력하려면 ~> keySet()
+
+        // [1] 가장 싼 과일의 금액은?
+        Map.Entry<String, Integer> entry = map.firstEntry();
+        Integer minEntry = entry.getValue();
+        System.out.println("트리맵에서 첫 번째 요소를 출력하려면 ? : " + minEntry);
+
+        // [2]
+        Map.Entry<String, Integer> entry2 = map.lastEntry();
+        Integer maxEntry = entry2.getValue();
+        System.out.println("트리맵에서 마지막 번째 요소를 출력하려면 ? : " + maxEntry);
+
+        // [3] 트리맵 요소 전체 출력 ~> 변수 따로 만들어서
+        Set<Entry<String, Integer>> entrySet = map.entrySet();
+        for(Entry<String, Integer> e : entrySet){
+            System.out.println(e);
+        }
+
+        // [4] 트리맵 키 전체 출력 : 변수 따로 만들어서...
+        Set<String> keySet = map.keySet();
+        for(String s : keySet){
+            System.out.println(s);
+        } 
     }
 }
