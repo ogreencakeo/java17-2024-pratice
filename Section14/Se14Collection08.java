@@ -138,7 +138,7 @@ public class Se14Collection08 {
             }
         }
 
-        System.out.println(maxEntry1);
+        System.out.println("가장 비싼 과일은 ? : " + maxEntry1); // 체리=50000
 
     }
 }
