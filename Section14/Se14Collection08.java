@@ -124,6 +124,21 @@ public class Se14Collection08 {
 
         System.out.println("----------------------------------------------- [7]");
         // [7] 가격이 가장 비싼 과일의 이름을 알고 싶다면?
-        
+        // 다양한 방법이 존재 ~> 트리맵을 순회하면서 가장 큰 / 비싼 value 값을 찾아서 출력
+        // 반복문 사용 시 조건을 어떻게 작성해야할지 고민이 필요
+
+        // 가장 비싼 가격을 담을 변수 선언
+        Map.Entry<String, Integer> maxEntry1 = null;
+
+        // 순회하면서 조건 비교
+        for(Map.Entry<String, Integer> e : map.entrySet()){
+            // 과일의 금액을 대소 비교
+            if(maxEntry1 == null || e.getValue() > maxEntry1.getValue()){
+                maxEntry1 = e;
+            }
+        }
+
+        System.out.println(maxEntry1);
+
     }
 }
