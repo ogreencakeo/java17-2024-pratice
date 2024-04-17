@@ -106,5 +106,20 @@ public class Se14Collection08 {
         for(String s : keySet){
             System.out.println(s);
         } 
+
+        System.out.println("----------------------------------------------- [6]");
+        // lowerEntry() 메서드 사용하기
+        // 언제 사용하지? ~> 지정된 키보다 작은거에서 큰 키를 찾을 수 있다.
+        // (문제) 지정한 과일보다 작은거에서 가장 큰 과일의 가격은 ? ~> 주의할 점은 키를 기준으로 동작
+        Entry<String, Integer> entryA = map.lowerEntry("참외");
+        System.out.println(entryA);
+
+        Entry<String, Integer> entryB = map.higherEntry("참외");
+        System.out.println(entryB);
+
+        int priceA = map.lowerEntry("참외").getValue();
+        int priceB = map.higherEntry("참외").getValue();
+        System.out.println(priceA); // 40000
+        System.out.println(priceB); // 50000
     }
 }
