@@ -12,6 +12,7 @@ public class Se14Collection11 {
         tmap.put(new UPerson("홍길동", 40), "의적");
         tmap.put(new UPerson("강감찬", 20), "장군");
         tmap.put(new UPerson("이순신", 30), "영웅");
+        tmap.put(new UPerson("김유신", 50), "장군");
 
         // Person 객체를 요소로 추가 시 에러가 나는 이유는 ?
         // 1. "Comparable" 인터페이스 타입으로 캐스팅 할 수가 없다. 라는 오류 발생
@@ -22,7 +23,8 @@ public class Se14Collection11 {
 
         // 향상된 for문 사용해서 출력하기
         for(Map.Entry<UPerson, String> e: tmap.entrySet()){
-            System.out.println(e);
+            System.out.println(e.getKey().name + ", " +  e.getKey().age +
+            " : " + e.getValue());
         }
     }
 }
@@ -36,10 +38,10 @@ class UPerson implements Comparable<UPerson>{
         this.age = age;
     }
 
-    public String toString(){
-        return String.format("Person : { name : %s, age : %d}", 
-        this.name, this.age);
-    }
+    // public String toString(){
+    //     return String.format("Person : { name : %s, age : %d}", 
+    //     this.name, this.age);
+    // }
 
     // Comparable 인터페이스 구현
     @Override
