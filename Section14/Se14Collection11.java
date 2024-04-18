@@ -46,6 +46,7 @@ class UPerson implements Comparable<UPerson>{
     // Comparable 인터페이스 구현
     @Override
     public int compareTo(UPerson o) {
-        return this.name.compareTo(o.name);
+        // return this.name.compareTo(o.name); // 이름을 오름차순 정렬
+        return o.age - this.age; // 나이를 내림차순 정렬
     }
 }
