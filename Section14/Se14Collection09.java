@@ -1,6 +1,8 @@
 package Section14;
 
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 import java.util.TreeMap;
 
 public class Se14Collection09 {
@@ -10,6 +12,7 @@ public class Se14Collection09 {
         // TreeMap 객체 생성 + 초깃값 설정 (요소 추가)
         TreeMap<Integer, String> map = new TreeMap<>(){{
             put(10000, "참외");
+            put(15000, "포도");
             put(20000, "포도");
             put(30000, "사과");
             put(50000, "체리");
@@ -35,12 +38,41 @@ public class Se14Collection09 {
         
         System.out.println("------------------------------------- [2]");
         // [2] 포도 가격이 얼마인지 출력하시오? -> 요거는 좀 생각...
-        for(Map.Entry<Integer, String> e : map.entrySet()){
-            if(e.getValue().equals("포도")){
-                System.out.println(e.getValue() + "의 가격은 " + e.getKey() + "입니다.");
+        // 2-1
+        // keySet() + get() 메서드 포함
+        Set<Integer> keySet = map.keySet();
+
+        // 변수 선언
+        Integer price = null;
+
+        // 순회하면서 포도가 들어있는지 key 검색
+        for(Integer k : keySet){
+            if(map.get(k).equals("포도")){
+                price = k;
                 break;
             }
         }
+        System.out.println("포도의 가격은 ? : " + price);
+
+        // 2-2
+        // entrySet() + getValue() 메서드 조합
+        Set<Map.Entry<Integer, String>> entrySet = map.entrySet();
+
+        // 변수 선언
+        Map.Entry<Integer, String> entry = null;
+
+        // 순회하면서 포도가 들어있는지 entry 검색
+        for(Map.Entry<Integer, String> e : entrySet){
+            if(e.getValue().equals("포도")){
+                entry = e;
+                break;
+            }
+        }
+
+        System.out.println("포도의 가격은 ? : " + entry.getKey());
+
+        // value 값에 "포도"가 중복으로 있는 경우 첫 번째로 매칭된 요소의 금액을 출력
+
 
         System.out.println("------------------------------------- [3]");
         // [3] 과일 중 가격이 가장 싼 과일은?
