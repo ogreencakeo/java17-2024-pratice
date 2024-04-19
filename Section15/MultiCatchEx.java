@@ -10,6 +10,7 @@ public class MultiCatchEx {
             // arr[3] = 100; // 예외 발생
             int result = 10 / 0; // 예외 발생
         }
+        // Catch 구문에서 항상 Exception 클래스는 맨 마지막에 와야한다.
         // catch(Exception e){
         //     System.out.println("예외발생"); // 최고 조상 클래스가 위에 있으면 안됨
         // } 
