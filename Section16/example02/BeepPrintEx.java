@@ -2,7 +2,12 @@ package Section16.example02;
 
 // java.awt.Toolkit;
 
+// 스레드는 한번 start()를 다 실행하고 나면, 재실행이 안된다.
+// 재실행을 하고자 한다면, 인스턴스를 한 개 더 만들어야 한다. (중요)
+
 public class BeepPrintEx {
+    private static final String Toolkit = null;
+
     // main() 은 JVM이 실행한다.
     public static void main(String[] args) {
 
@@ -53,5 +58,10 @@ public class BeepPrintEx {
         }
         
         // 싱글 스레드를 멀티 스레드로 바꿔서 프로그램을 만들어야 한다.
+    }
+
+    private static void beep() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'beep'");
     }    
 }
