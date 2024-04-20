@@ -58,10 +58,5 @@ public class BeepPrintEx {
         }
         
         // 싱글 스레드를 멀티 스레드로 바꿔서 프로그램을 만들어야 한다.
-    }
-
-    private static void beep() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'beep'");
-    }    
+    } 
 }
