@@ -1,0 +1,53 @@
+[ 일반 예외 (Checked Exception) ] 
+일반 예외는 Exception 클래스를 상속받는 예외 클래스로, 컴파일러가 체크할 수 있는 예외입니다.
+이 예외를 처리하는 것이 의무화되어 있어서 반드시 예외 처리 코드를 작성해야 합니다 (try-catch 블록이나 throws 선언).
+예시: IOException, SQLException 등
+
+[ 런타임 예외 (Unchecked Exception) ]
+런타임 예외는 RuntimeException 클래스를 상속받는 예외 클래스로, 컴파일러가 체크할 수 없는 예외입니다.
+예외 처리가 선택적이며, 코드에서 명시적으로 예외 처리를 하지 않아도 됩니다.
+대부분의 런타임 예외는 프로그램의 오류나 잘못된 사용을 나타냅니다.
+예시: ArithmeticException, NullPointerException 등
+
+[ 사용자 정의 예외 클래스 만들기 ]
+사용자 정의 예외 클래스는 기존의 예외 클래스를 확장하여 새로운 예외를 정의하는 것입니다. 
+사용자 정의 예외 클래스를 만드는 이유는 프로그램 동작에서 발생할 수 있는 특정 예외 상황을 명확히 표현하고, 
+이에 대한 적절한 처리를 위해 사용됩니다.
+
+[ 사용자 정의 예외 클래스를 만들려면 다음과 같은 단계를 따릅니다.] 
+1. Exception 클래스를 상속받는 사용자 정의 예외 클래스를 생성합니다.
+2. 필요한 생성자와 메서드를 추가하여 예외를 던질 때 필요한 정보를 설정할 수 있도록 합니다.
+3. 예외 발생 시 처리할 로직을 작성합니다.
+
+// 사용자 정의 예외 클래스
+public class InvalidAgeException extends Exception {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
+// 예외 발생하는 메서드
+public class AgeValidator {
+    public void validateAge(int age) throws InvalidAgeException {
+        if (age < 0 || age > 150) {
+            throw new InvalidAgeException("나이가 유효하지 않습니다.");
+        }
+        System.out.println("나이가 유효합니다.");
+    }
+}
+
+// 사용 예시
+public class Main {
+    public static void main(String[] args) {
+        AgeValidator validator = new AgeValidator();
+        try {
+            validator.validateAge(160); // 유효하지 않은 나이
+        } catch (InvalidAgeException e) {
+            System.out.println("예외 발생: " + e.getMessage());
+        }
+    }
+}
+
+위의 예제에서 InvalidAgeException은 Exception 클래스를 상속받아 사용자 정의 예외 클래스를 정의한 것입니다. 
+validateAge 메서드에서 나이가 유효하지 않을 경우 InvalidAgeException을 발생시킵니다. 
+호출하는 쪽에서는 try-catch 블록을 사용하여 해당 예외를 처리할 수 있습니다.
