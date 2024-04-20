@@ -1,8 +1,5 @@
 package Section16.example02;
 // java.awt.Toolkit;
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 
 // Runnable 인터페이스를 직접 구현하고 있다.
 public class Beep implements Runnable{
