@@ -12,7 +12,7 @@ public class ThreadNameEx {
 
         ThreadB threadB = new ThreadB();
         System.out.println("[ ThreadB를 생성한 스레드 이름 ] : " + thread.currentThread().getName());
-        System.out.println("[ main스레드가 ThreadBd의 이름을 가져온 것 ] : " + threadA.currentThread().getName());
+        System.out.println("[ main스레드가 threadB의 이름을 가져온 것 ] : " + threadB.currentThread().getName());
         threadB.start();
 
         // 위의 코드들은 메인 스레드 2개의 스레드를 생성해서 start() 시켜주는 것
